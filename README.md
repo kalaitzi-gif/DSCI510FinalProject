@@ -83,7 +83,7 @@ To run the 'visualize_results.py' file, type the following in the terminal ("pyt
 
 
 
-**Data Collection Procedure**
+**Data Collection Procedure --> STANDARDIZE STEPS TO MATCH THE REST OF THE PAHSES**
 
 To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the Dartmouth Early Warning Project (DEWP) "Reports & Downloads" webpage: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads", locate the banner entitled "All 2025-26 Data (CSV)". Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically downloaded.
 
@@ -101,14 +101,14 @@ For this project, the above was done for the following indicators ("Indicator na
 
 - Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
 
-The exact processes utilized for collection the data necessary for this project are detailed in the section headers of each file
+The exact processes utilized for data collection necessary for this project are detailed in the section headers of each file
 
 
 **Data Cleaning Procedure**
 
 Steps for the Data Cleaning Procedure are below:
 
-**STEP A**
+**STEP A: Import Libraries**
 
 1.) Import pandas and json libraries (as described above)
 
@@ -207,7 +207,18 @@ The exact processes utilized for cleaning the data necessary for this project ar
 
 
 
+
+
 **Data Analysis Procedure**
+
+Steps for the Data Analysis Procedure are below:
+
+**STEP A: Import Libraries**
+
+1.) Import numpy and pandas libraries (as described above)
+
+
+**STEP B: Load merged Dartmouth EWP (DEWP) and World Bank API file, 'merged_wb_dartmouth.csv'.**
 
 First, we import the pandas and numpy libraries. Next, we load the "merged_wb_dartmouth_df" file obtained in our 'clean_data.py' file. Next, we clean this file by first defining the five official Caucasus countries via their ISO3 country codes (ISO3166), listed below ("country -- ISO3 code"):
 
