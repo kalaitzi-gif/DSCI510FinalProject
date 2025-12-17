@@ -20,19 +20,19 @@ Below, I outline the necessary components for completing this project.
 - Utilized in 'get_data.py', 'clean_data.py', 'run_analysis.py', 'visualize_results.py.'
 
 **2.) Import requests module to retrieve webpage**
-- Loaded library via rendering statement in terminal 'import requests.'
+- Loaded library via rendering statement in terminal "import requests"
 - Utilized in 'get_data.py.'
 
 **3.) Import JSON module to relay API responses and work with JSON-formatted files**
-- Loaded  library via rendering statement in terminal 'import json'
+- Loaded  library via rendering statement in terminal "import json"
 - Utilized in 'get_data.py', 'clean_data.py.'
 
 **4.) Import numpy library (for mathematical functions: linear algebra, random numbers)**
-- Loaded library via rendering statement in terminal 'import numpy' (as np)
+- Loaded library via rendering statement in terminal "import numpy" (as np)
 - Utilized in 'run_analysis.py', 
 
 **5.) Import the matplotlib library for visualization of plotting**
-- Loaded via rendering statement in terminal 'import matplotlib' (as plt)
+- Loaded via rendering statement in terminal "import matplotlib" (as plt)
 - Utilized in 'visualize_results.py.'
 
 
@@ -85,21 +85,19 @@ To run the 'visualize_results.py' file, type the following in the terminal ("pyt
 
 **Data Collection**
 
-To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the Dartmouth Early Warning Project (DEWP) "Reports & Downloads" wepage: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads", locate the banner entitled "All 2025-26 Data (CSV)". Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically
-downloaded.
+To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the Dartmouth Early Warning Project (DEWP) "Reports & Downloads" wepage: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads", locate the banner entitled "All 2025-26 Data (CSV)". Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically downloaded.
 
-To obtain the World Bank API data necessary for this project, navigate to the following website: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation Next, under the "About the Indicators API," there will be a hyperlinked "Basic Call Structure," Clicking this will take the user to the webpage instructing how to construct a basic API call to the base url () to scrape indicator names and indicator codes **(i.e., scraping the '--' indicator requires the user to input the indicator code, in this case '---' into the bease url, '---base url with code')**. In turn, this will generate the raw JSON data corresponding to that indicator.
+To obtain the World Bank API data necessary for this project (i.e., global indicator names, codes, and values), navigate to the World Bank "About the Indicators API Documentation" webpage: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation Next, under the "About the Indicators API," there will be a hyperlinked "Basic Call Structure," Clicking this will take the user to the webpage instructing how to construct a basic API call to the base url to scrape indicator names and indicator codes **(i.e., scraping the 'Population, total' indicator requires the user to pass the indicator code, in this case 'SP.POP.TOTL' into the bease url)**. In turn, this will generate the raw JSON format of the indicator's name, value, and code.
 
-For this project, the above was done for the following indicators:
-**1.) INDICATOR NAME AND CODE**
-**2.) INDICATOR NAME AND CODE**
-**3.) INDICATOR NAME AND CODE**
-**4.) INDICATOR NAME AND CODE**
-**5.) INDICATOR NAME AND CODE**
+For this project, the above was done for the following indicators ("Indicator name → Indicator Code"):
+
+1.) GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG)
+2.) GDP per capita (constant 2015 US$) → (NY.GDP.PCAP.KD)
+3.) Population growth (annual %) → (SP.POP.GROW)
+4.) Population, total → (SP.POP.TOTL)
+5.) Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
 
 The exact processes utilized for cleaning the data necessary for this project are detailed in the section headers of each file
-
-
 
 
 **how to clean data**
