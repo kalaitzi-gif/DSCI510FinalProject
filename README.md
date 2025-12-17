@@ -13,7 +13,7 @@ Below, I outline the necessary components for completing this project.
 
 **Requirement Installation for Project**
 
-The requirements for this project are the following libraries (via terminal):
+**The requirements for this project are the following libraries (via terminal):**
 
 **1.) Import pandas library (to load, filter, and save dataset)**
 - Loaded library via rendering statement in terminal 'import pandas' (as pd)
