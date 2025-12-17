@@ -36,7 +36,7 @@ Below, I outline the necessary components for completing this project.
 - Utilized in 'visualize_results.py.'
 
 
-**How to Run the Code**
+**Code Running Procedure**
 
 In the terminal, navigate to the directory where the project folder is located. This can be done by utilizing the 'cd' terminal command, which stands for 'change directory'.
 For example, to navigate to the directory where this project is located, one could type the following command into the terminal ("cd" followed by file path):
@@ -83,11 +83,11 @@ To run the 'visualize_results.py' file, type the following in the terminal ("pyt
 
 
 
-**Data Collection**
+**Data Collection Procedure**
 
 To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the Dartmouth Early Warning Project (DEWP) "Reports & Downloads" wepage: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads", locate the banner entitled "All 2025-26 Data (CSV)". Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically downloaded.
 
-To obtain the World Bank API data necessary for this project (i.e., global indicator names, codes, and values), navigate to the World Bank "About the Indicators API Documentation" webpage: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation Next, under the "About the Indicators API," there will be a hyperlinked "Basic Call Structure," Clicking this will take the user to the webpage instructing how to construct a basic API call to the base url to scrape indicator names and indicator codes **(i.e., scraping the 'Population, total' indicator requires the user to pass the indicator code, in this case 'SP.POP.TOTL' into the bease url)**. In turn, this will generate the raw JSON format of the indicator's name, value, and code.
+To obtain the World Bank API data necessary for this project (i.e., global indicator names, codes, and values), navigate to the World Bank "About the Indicators API Documentation" webpage: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation Next, under the "About the Indicators API," there will be a hyperlinked "Basic Call Structure," Clicking this will take the user to the webpage instructing how to construct a basic API call to the base url to scrape indicator names and indicator codes (i.e., scraping the 'Population, total' indicator requires the user to pass the indicator code, in this case 'SP.POP.TOTL' into the bease url). In turn, this will generate the raw JSON format of the indicator's name, value, and code.
 
 For this project, the above was done for the following indicators ("Indicator name → Indicator Code"):
 
@@ -104,7 +104,7 @@ For this project, the above was done for the following indicators ("Indicator na
 The exact processes utilized for cleaning the data necessary for this project are detailed in the section headers of each file
 
 
-**how to clean data**
+**Data Cleaning Procedure**
 
 First, we import the pandas and json libraries. Next, we load the "WorldwideData_sra_2025.csv" file obtained in our 'get_data.py' file. We clean this file by filtering columns of interest, which include the following risk factors:
 
@@ -157,7 +157,7 @@ The exact processes utilized for cleaning the data necessary for this project ar
 
 
 
-**How to run the analysis**
+**Data Analysis Procedure**
 
 First, we import the pandas and numpy libraries. Next, we load the "merged_wb_dartmouth_df" file obtained in our 'clean_data.py' file. Next, we clean this file by first defining the five official Caucasus countries via their ISO3 country codes (ISO3166), listed below ("country -- ISO3 code"):
 
@@ -167,7 +167,7 @@ Georgia -- GEO
 Iran -- IRN
 Russia --RUS
 
-**DS**
+****Data Statistics Procedure****
 
 Then, we perform descriptive statistics on our combined DEWP risk factors and WB Indicators, listed below.
 The output of these statistics includes elements such as count, mean, standard deviation, 25th percentile, 50th
@@ -196,7 +196,7 @@ Urban population (% of total population) --> select WB 'Urban Population (%)' in
 
 Next, we save these descriptive statistics for these risk factors/indicators
 
-**per-country avgs**
+**Per-Country Averages Procedure**
 
 The third step involves generating a Pearson correlation between a given country's risk for experiencing ongoing mass killing and its current GDP per capita. This involves selecting the relevant columns, listed below:
 
@@ -206,7 +206,7 @@ GDP per capita (constant 2015 US$)_mean
 
 We save these correlations to a CSV file
 
-**correlations**
+**Correlations Procedure**
 
 The third step involves generating a Pearson correlation between 'risk_in_2024_mean' and all other DEWP risk factors and WB Indicators. This involves selecting the averages of all DEWP risk factors and WB indicators, listed below:
 
@@ -228,7 +228,7 @@ Detailed data analysis for this project is documented via comments in the 'run_a
 
 
 
-**How to produce the visualizations**
+****Data Visualizations Procedure****
 
 First, we import the pandas and matplotlib libraries. Next, we generate three visualizations for each descriptive statistic calculated above
 
