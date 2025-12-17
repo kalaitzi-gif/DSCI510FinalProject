@@ -46,7 +46,7 @@ For example, to navigate to the directory where this project is located, one cou
 For each required code block of this project, one would navigate to the following directories in the terminal
 
 
-1.) To retrieve and run 'get_data.py', navigate to the following directory using the path below:
+**1.)** To retrieve and run 'get_data.py', navigate to the following directory using the path below:
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/data/raw"
 
@@ -55,7 +55,7 @@ To run the 'get_data.py' file, type the following in the terminal ("python", fol
 "python get_data.py"
 
 
-2.) To retrieve and run 'clean_data.py', navigate to the following directory using the path below:
+**2.)** To retrieve and run 'clean_data.py', navigate to the following directory using the path below:
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/data/processed"
 
@@ -64,7 +64,7 @@ To run the 'clean_data.py' file, type the following in the terminal ("python", f
 "python clean_data.py"
 
 
-3.) To retrieve and run 'run_analysis.py', navigate to the following directory using the path below:
+**3.)** To retrieve and run 'run_analysis.py', navigate to the following directory using the path below:
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/src"
 
@@ -72,7 +72,7 @@ To run the 'run_analysis.py' file, type the following in the terminal ("python",
 
 "python run_analysis.py"
 
-4.) To retrieve and run 'visualize_results.py', navigate to the following directory using the path below
+**4.)** To retrieve and run 'visualize_results.py', navigate to the following directory using the path below
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/src"
 
