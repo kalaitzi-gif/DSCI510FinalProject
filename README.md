@@ -1,5 +1,5 @@
 **DSCI510FinalProject**
-This GitHub Repository contains the files necessary for completion of the DSCI510 final project for the Fall 2025 semester.
+This GitHub Repository (and/or zip file) contains the files necessary for completion of the DSCI510 final project for the Fall 2025 semester, taught by Professor Itay Hen.
 
 The team member for this project is Maria Popovic. Email, GitHub username, and USC ID are below.
 
@@ -9,26 +9,31 @@ The team member for this project is Maria Popovic. Email, GitHub username, and U
 
 **USC ID:** 2532568719
 
-Below, I describe how to fulfill the necessary components for completing this project
+Below, I describe how to fulfill the necessary components for completing this project.
 
 **How to install requirements for the project**
 
 The requirements for this project are the following libraries (via terminal):
 
-1.) pandas library (to load, filter, and save dataset) --> used in 'get_data.py', 'clean_data.py', 'run_analysis.py', 'visualize_results.py.'
-loaded via rendering statement in terminal 'import pandas' (as pd)
+1.) pandas library (to load, filter, and save dataset)
+- loaded library via rendering statement in terminal 'import pandas' (as pd)
+- used in 'get_data.py', 'clean_data.py', 'run_analysis.py', 'visualize_results.py.'
 
-2.) import requests module to retrieve webpage --> used in 'get_data.py.'
-loaded via rendering statement in terminal 'import requests.'
+2.) import requests module to retrieve webpage
+- loaded library via rendering statement in terminal 'import requests.'
+- used in 'get_data.py.'
 
-3.) # import JSON module to relay API responses and work with JSON-formatted files --> used in 'get_data.py', 'clean_data.py.'
-loaded via rendering statement in terminal 'import json'
+3.) import JSON module to relay API responses and work with JSON-formatted files
+- loaded  library via rendering statement in terminal 'import json'
+- used in 'get_data.py', 'clean_data.py.'
 
-4.) import numpy library (for mathematical functions: linear algebra, random numbers) --> used in 'run_analysis.py', 
-loaded via rendering statement in terminal 'import numpy' (as np)
+4.) import numpy library (for mathematical functions: linear algebra, random numbers)
+-loaded library via rendering statement in terminal 'import numpy' (as np)
+- used in 'run_analysis.py', 
 
 5.) Import the matplotlib library for visualization of plotting
-loaded via rendering statement in terminal 'import matplotlib' (as plt) --> used in 'visualize_results.py.'
+- loaded via rendering statement in terminal 'import matplotlib' (as plt)
+- used in 'visualize_results.py.'
 
 
 **How to run the code**
