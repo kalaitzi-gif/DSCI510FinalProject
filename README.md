@@ -106,16 +106,30 @@ The exact processes utilized for cleaning the data necessary for this project ar
 
 **Data Cleaning Procedure**
 
-First, we import the pandas and json libraries. Next, we load the "WorldwideData_sra_2025.csv" file obtained in our 'get_data.py' file. We clean this file by filtering columns of interest, which include the following risk factors:
+Steps for the Data Cleaning Procedure are below:
 
-ISO3
-risk_in_2024
-riskrank
-year
-freediscussion
-religiousfreedom
-efindex
-discrimpop
+1.) Import pandas and json libraries
+
+2.) Load the "WorldwideData_sra_2025.csv" file obtained in our 'get_data.py' file
+
+3.) Clean "WorldwideData_sra_2025.csv" file via column filtration of the following risk factors from CSV file:
+
+1.) ISO3
+
+2.) risk_in_2024
+
+3.) riskrank
+
+4.) year
+
+5.) freediscussion
+
+6.) religiousfreedom
+
+7.) efindex
+
+8.) discrimpop
+
 
 Then, we define the five official Caucasus countries via their ISO3 country codes (ISO3166) for filtering Dartmouth EWP data, listed below ("country -- ISO3 code"):
 
