@@ -167,15 +167,25 @@ The output of these statistics includes elements such as count, mean, standard d
 percentile, and the 75th percentile of each of the listed risk factors and indicators below
 
 risk_in_2024 --> select DEWP "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
+
 freediscussion --> select DEWP "Citizens' ability to openly discuss political issues."
+
 efindex --> select DEWP variable representing percentage of "Ethnic Heterogeneity." 
+
 religiousfreedom --> select DEWP variable showing whether or not there is "Freedom of Religion." 
+
 discrimpop --> select DEWP variable representing "Portion of Population Coded as Being Discriminated Against (%)"
+
 GDP growth (annual %) --> select WB 'GDP Growth' indicator 
+
 GDP per capita (constant 2015 US$) --> select WB 'GDP per capita (constant 2015 US$)' indicator 
+
 Population growth (annual %) --> select WB 'Population growth (annual %)' indicator
+
 Population, total --> select WB 'Population, total' indicator 
+
 Urban population (% of total population) --> select WB 'Urban Population (%)' indicator 
+
 
 Next, we save these descriptive statistics for these risk factors/indicators
 
