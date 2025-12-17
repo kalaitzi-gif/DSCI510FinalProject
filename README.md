@@ -43,40 +43,40 @@ For example, to navigate to the directory where this project is located, one cou
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject"
 
-For each required code block of this project, one would navigate to the following directories in the terminal
+**For each required code block of this project, one would navigate to the following directories in the terminal**
 
 
-**1.)** To retrieve and run 'get_data.py', navigate to the following directory using the path below:
+**1.) To retrieve and run 'get_data.py', navigate to the following directory using the path below:**
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/data/raw"
 
-To run the 'get_data.py' file, type the following in the terminal ("python", followed by the file you wish to run):
+**To run the 'get_data.py' file, type the following in the terminal ("python", followed by the file you wish to run):**
 
 "python get_data.py"
 
 
-**2.)** To retrieve and run 'clean_data.py', navigate to the following directory using the path below:
+**2.) To retrieve and run 'clean_data.py', navigate to the following directory using the path below:**
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/data/processed"
 
-To run the 'clean_data.py' file, type the following in the terminal ("python", followed by the file you wish to run):
+**To run the 'clean_data.py' file, type the following in the terminal ("python", followed by the file you wish to run):**
 
 "python clean_data.py"
 
 
-**3.)** To retrieve and run 'run_analysis.py', navigate to the following directory using the path below:
+**3.) To retrieve and run 'run_analysis.py', navigate to the following directory using the path below:**
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/src"
 
-To run the 'run_analysis.py' file, type the following in the terminal ("python", followed by the file you wish to run):
+**To run the 'run_analysis.py' file, type the following in the terminal ("python", followed by the file you wish to run):**
 
 "python run_analysis.py"
 
-**4.)** To retrieve and run 'visualize_results.py', navigate to the following directory using the path below
+**4.) To retrieve and run 'visualize_results.py', navigate to the following directory using the path below**
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/src"
 
-To run the 'visualize_results.py' file, type the following in the terminal ("python", followed by the file you wish to run):
+**To run the 'visualize_results.py' file, type the following in the terminal ("python", followed by the file you wish to run):**
 
 "python visualize_results.py"
 
