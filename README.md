@@ -15,23 +15,23 @@ Below, I outline the necessary components for completing this project.
 
 The requirements for this project are the following libraries (via terminal):
 
-1.) pandas library (to load, filter, and save dataset)
+**1.) pandas library (to load, filter, and save dataset)**
 - loaded library via rendering statement in terminal 'import pandas' (as pd)
 - used in 'get_data.py', 'clean_data.py', 'run_analysis.py', 'visualize_results.py.'
 
-2.) import requests module to retrieve webpage
+**2.) import requests module to retrieve webpage**
 - loaded library via rendering statement in terminal 'import requests.'
 - used in 'get_data.py.'
 
-3.) import JSON module to relay API responses and work with JSON-formatted files
+**3.) import JSON module to relay API responses and work with JSON-formatted files**
 - loaded  library via rendering statement in terminal 'import json'
 - used in 'get_data.py', 'clean_data.py.'
 
-4.) import numpy library (for mathematical functions: linear algebra, random numbers)
+**4.) import numpy library (for mathematical functions: linear algebra, random numbers)**
 - loaded library via rendering statement in terminal 'import numpy' (as np)
 - used in 'run_analysis.py', 
 
-5.) Import the matplotlib library for visualization of plotting
+**5.) Import the matplotlib library for visualization of plotting**
 - loaded via rendering statement in terminal 'import matplotlib' (as plt)
 - used in 'visualize_results.py.'
 
