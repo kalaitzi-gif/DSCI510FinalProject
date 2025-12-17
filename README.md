@@ -85,7 +85,7 @@ To run the 'visualize_results.py' file, type the following in the terminal ("pyt
 
 **Data Collection Procedure**
 
-To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the Dartmouth Early Warning Project (DEWP) "Reports & Downloads" wepage: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads", locate the banner entitled "All 2025-26 Data (CSV)". Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically downloaded.
+To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the Dartmouth Early Warning Project (DEWP) "Reports & Downloads" webpage: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads", locate the banner entitled "All 2025-26 Data (CSV)". Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically downloaded.
 
 To obtain the World Bank API data necessary for this project (i.e., global indicator names, codes, and values), navigate to the World Bank "About the Indicators API Documentation" webpage: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation Next, under the "About the Indicators API," there will be a hyperlinked "Basic Call Structure," Clicking this will take the user to the webpage instructing how to construct a basic API call to the base url to scrape indicator names and indicator codes (i.e., scraping the 'Population, total' indicator requires the user to pass the indicator code, in this case "SP.POP.TOTL" into the bease url). In turn, this will generate the raw JSON format of the indicator's name, value, and code.
 
@@ -108,11 +108,15 @@ The exact processes utilized for cleaning the data necessary for this project ar
 
 Steps for the Data Cleaning Procedure are below:
 
-1.) Import pandas and json libraries
+**STEP A**
 
-2.) Load the "WorldwideData_sra_2025.csv" file obtained in our 'get_data.py' file
+1.) Import pandas and json libraries (as described above)
 
-3.) Clean "WorldwideData_sra_2025.csv" file via column filtration of the following risk factors from CSV file:
+**STEP B**
+
+2.) Load the "WorldwideData_sra_2025.csv" file obtained in the 'get_data.py' file
+
+3.) Clean "WorldwideData_sra_2025.csv" file via column filtration of the following risk factors from the CSV file:
 
 - ISO3 Country Code
 
@@ -144,29 +148,52 @@ Steps for the Data Cleaning Procedure are below:
 - Russia (RUS)
 
 
-Next, we create and save a separate, filtered dataframe containing only the risk factors/columns of interest and the aforementioned countries, thereby properly narrowing the scope of our analysis for the next stage. This stage will analyze these data to reflect the risk of ongoing mass killing in the Caucasus countries.
+5.) Create and save a separate, filtered dataframe containing only the aforementioned risk factors of interest and the aforementioned countries. This step properly narrows the scope of  analysis required for Step 3 of this project (Data Analysis, "run_analysis.py"), which will analyze these data to reflect the risk of ongoing mass killing in the Caucasus countries.
 
-3.) STEP C: Loads, cleans, filters, and saves processed WB API data in raw JSON format to reflect desired indicator names and indicator codes.
+**STEP C**
 
-In this step, we load the "RAW_WB_Caucasus_2025.json" file, which was obtained from our "get_data.py" file. We clean this file by first defining the five official Caucasus countries via their ISO3 country codes (ISO3166), listed below ("country -- ISO3 code"):
+Loads, cleans, filters, and saves processed WB API data in raw JSON format, reflecting the desired indicator names and indicator codes.
 
-Armenia -- ARM
-Azerbaijan -- AZE
-Georgia -- GEO
-Iran -- IRN
-Russia --RUS
+1.) Load the "RAW_WB_Caucasus_2025.json" file (obtained in Step 1, Data Collection, in the "get_data.py" file)
 
-Next, we filter our indicators of interest, which include the following ("Indicator Name - Indicator Code"):
+2.) Clean "RAW_WB_Caucasus_2025.json" file by the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code):
 
-GDP -- NY.GDP.PCAP.KD --> (Gross Domestic Product)
-GDP Growth -  NY.GDP.MKTP.KD.ZG --> (GDP Growth)
-Total Population - SP.POP.TOTL --> (Total Population)
-Urban Population (%) - SP.URB.TOTL.IN.ZS --> ('Urban Population (%))
-Population Growth - SP.POP.GROW --> (Population Growth)
+- Armenia (ARM)
 
-Next, we loop through each country, appending the above indicators and their corresponding values for the current country.
+- Azerbaijan (AZE)
 
-4.) STEP D: Standardizes column names across the DEWP CSV file and the raw WB JSON file to merge the files in preparation for analysis in 'run_analysis.py'.
+- Georgia (GEO)
+
+- Iran (IRN)
+
+- Russia (RUS)
+
+3.) Filter WB indicators of interest, which include the following ("Indicator Name - Indicator Code"):
+
+- GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG)
+
+- GDP per capita (constant 2015 US$) → (NY.GDP.PCAP.KD)
+
+- Population growth (annual %) → (SP.POP.GROW)
+
+- Population, total → (SP.POP.TOTL)
+
+- Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
+
+4.) Loop through each country via "for loop", appending the above indicators and their corresponding values for the current country into a specified list of dictionaries.
+
+5.) Convert the list of nested dictionaries, containing the following components for each country:
+
+- Country
+- Indicator Name
+- Indicator Code
+- Year
+- Indicator Value
+
+
+**STEP D**
+
+Standardizes column names across the DEWP CSV file and the raw WB JSON file to merge the files in preparation for analysis in 'run_analysis.py'.
 
 In this step, we convert our WB JSON data from long to wide format. Next, we merge (outer) our processed 'filtered_dartmouth_df' with our processed 'wb_records_wide', based on the union of keys from both dataframes ('Country' and 'Year')
 
