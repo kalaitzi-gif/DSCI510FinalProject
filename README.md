@@ -11,7 +11,7 @@ The team member for this project is Maria Popovic. Email, GitHub username, and U
 
 Below, I outline the necessary components for completing this project.
 
-**How to install requirements for the project**
+**Requirement Installation for Project**
 
 The requirements for this project are the following libraries (via terminal):
 
@@ -36,7 +36,7 @@ The requirements for this project are the following libraries (via terminal):
 - used in 'visualize_results.py.'
 
 
-**How to run the code**
+**How to Run the Code**
 
 In the terminal, navigate to the directory where the project folder is located. This can be done by utilizing the 'cd' terminal command, which stands for 'change directory'.
 For example, to navigate to the directory where this project is located, one could type the following command into the terminal ("cd" followed by file path):
@@ -50,7 +50,7 @@ For example, to navigate to the directory where this project is located, one cou
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/data/raw"
 
-**To run the 'get_data.py' file, type the following in the terminal ("python", followed by the file you wish to run):**
+To run the 'get_data.py' file, type the following in the terminal ("python", followed by the file you wish to run):
 
 "python get_data.py"
 
@@ -59,7 +59,7 @@ For example, to navigate to the directory where this project is located, one cou
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/data/processed"
 
-**To run the 'clean_data.py' file, type the following in the terminal ("python", followed by the file you wish to run):**
+To run the 'clean_data.py' file, type the following in the terminal ("python", followed by the file you wish to run):
 
 "python clean_data.py"
 
@@ -68,7 +68,7 @@ For example, to navigate to the directory where this project is located, one cou
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/src"
 
-**To run the 'run_analysis.py' file, type the following in the terminal ("python", followed by the file you wish to run):**
+To run the 'run_analysis.py' file, type the following in the terminal ("python", followed by the file you wish to run):
 
 "python run_analysis.py"
 
@@ -76,14 +76,14 @@ For example, to navigate to the directory where this project is located, one cou
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/src"
 
-**To run the 'visualize_results.py' file, type the following in the terminal ("python", followed by the file you wish to run):**
+To run the 'visualize_results.py' file, type the following in the terminal ("python", followed by the file you wish to run):
 
 "python visualize_results.py"
 
 
 
 
-**how to get the data**
+**Data Collection**
 
 To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the following website: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads", locate the banner entitled "All 2025-26 Data (CSV)". Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically
 downloaded.
