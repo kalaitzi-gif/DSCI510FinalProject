@@ -28,7 +28,7 @@ The requirements for this project are the following libraries (via terminal):
 - used in 'get_data.py', 'clean_data.py.'
 
 4.) import numpy library (for mathematical functions: linear algebra, random numbers)
--loaded library via rendering statement in terminal 'import numpy' (as np)
+- loaded library via rendering statement in terminal 'import numpy' (as np)
 - used in 'run_analysis.py', 
 
 5.) Import the matplotlib library for visualization of plotting
