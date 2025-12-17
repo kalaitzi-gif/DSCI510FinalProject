@@ -85,7 +85,7 @@ To run the 'visualize_results.py' file, type the following in the terminal ("pyt
 
 **Data Collection**
 
-To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the following website: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads", locate the banner entitled "All 2025-26 Data (CSV)". Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically
+To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the Dartmouth Early Warning Project (DEWP) "Reports & Downloads" wepage: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads", locate the banner entitled "All 2025-26 Data (CSV)". Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically
 downloaded.
 
 To obtain the World Bank API data necessary for this project, navigate to the following website: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation Next, under the "About the Indicators API," there will be a hyperlinked "Basic Call Structure," Clicking this will take the user to the webpage instructing how to construct a basic API call to the base url () to scrape indicator names and indicator codes **(i.e., scraping the '--' indicator requires the user to input the indicator code, in this case '---' into the bease url, '---base url with code')**. In turn, this will generate the raw JSON data corresponding to that indicator.
