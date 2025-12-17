@@ -22,7 +22,7 @@ loaded via rendering statement in terminal 'import pandas' (as pd)
 loaded via rendering statement in terminal 'import requests.'
 
 3.) # import JSON module to relay API responses and work with JSON-formatted files --> used in 'get_data.py', 'clean_data.py.'
-loaded via rendering statement in terminal 'import jso.n'
+loaded via rendering statement in terminal 'import json'
 
 4.) import numpy library (for mathematical functions: linear algebra, random numbers) --> used in 'run_analysis.py', 
 loaded via rendering statement in terminal 'import numpy' (as np)
@@ -75,6 +75,9 @@ To run the 'visualize_results.py' file, type the following in the terminal ("pyt
 
 "python visualize_results.py"
 
+
+
+
 **how to get the data**
 
 To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the following website: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads", locate the banner entitled "All 2025-26 Data (CSV)". Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically
@@ -89,7 +92,10 @@ For this project, the above was done for the following indicators:
 **4.) INDICATOR NAME AND CODE**
 **5.) INDICATOR NAME AND CODE**
 
-Detailed data collection for this project is documented via comments in the 'get_data.py' file.
+The exact processes utilized for cleaning the data necessary for this project are detailed in the section headers of each file
+
+
+
 
 **how to clean data**
 
@@ -113,11 +119,11 @@ Iran -- IRN
 Russia --RUS
 
 
-Next, we create and save a separate, filtered dataframe containing only the risk factors/columns of interest and the aforementioned countries, thereby properly narrowing down our analysis scope for the next stage. This stage will analyze these data to reflect the risk of ongoing mass killing in the Caucasus countries.
+Next, we create and save a separate, filtered dataframe containing only the risk factors/columns of interest and the aforementioned countries, thereby properly narrowing the scope of our analysis for the next stage. This stage will analyze these data to reflect the risk of ongoing mass killing in the Caucasus countries.
 
 3.) STEP C: Loads, cleans, filters, and saves processed WB API data in raw JSON format to reflect desired indicator names and indicator codes.
 
-In this step, we load the "RAW_WB_Caucasus_2025.json" file, which was obtained from our "get_data.py" file. We clean this file by defining the five official Caucasus countries via their ISO3 country codes (ISO3166), listed below ("country -- ISO3 code"):
+In this step, we load the "RAW_WB_Caucasus_2025.json" file, which was obtained from our "get_data.py" file. We clean this file by first defining the five official Caucasus countries via their ISO3 country codes (ISO3166), listed below ("country -- ISO3 code"):
 
 Armenia -- ARM
 Azerbaijan -- AZE
@@ -125,26 +131,101 @@ Georgia -- GEO
 Iran -- IRN
 Russia --RUS
 
-Next, we filter our indicators of interest, which include the following ("Indicator Name - In dicator Code"):
+Next, we filter our indicators of interest, which include the following ("Indicator Name - Indicator Code"):
 
-4.) STEP D: Standardizes column names across the DEWP CSV file and the raw WB JSON file to
-merge the files in preparation for analysis in 'run_analysis.py'.
+GDP -- NY.GDP.PCAP.KD --> (Gross Domestic Product)
+GDP Growth -  NY.GDP.MKTP.KD.ZG --> (GDP Growth)
+Total Population - SP.POP.TOTL --> (Total Population)
+Urban Population (%) - SP.URB.TOTL.IN.ZS --> ('Urban Population (%))
+Population Growth - SP.POP.GROW --> (Population Growth)
+
+Next, we loop through each country, appending the above indicators and their corresponding values for the current country.
+
+4.) STEP D: Standardizes column names across the DEWP CSV file and the raw WB JSON file to merge the files in preparation for analysis in 'run_analysis.py'.
+
+In this step, we convert our WB JSON data from long to wide format. Next, we merge (outer) our processed 'filtered_dartmouth_df' with our processed 'wb_records_wide', based on the union of keys from both dataframes ('Country' and 'Year')
+
+The exact processes utilized for cleaning the data necessary for this project are detailed in the section headers of each file
 
 
-The exact processes utilized for cleaning the data necessary for this project is detailed in the section headers of each file
-
-
-Detailed data cleaning for this project is documented via comments in the 'clean_data.py' file.
 
 
 **How to run the analysis**
 
+First, we import the pandas and numpy libraries. Next, we load the "merged_wb_dartmouth_df" file obtained in our 'clean_data.py' file. Next, we clean this file by first defining the five official Caucasus countries via their ISO3 country codes (ISO3166), listed below ("country -- ISO3 code"):
 
+Armenia -- ARM
+Azerbaijan -- AZE
+Georgia -- GEO
+Iran -- IRN
+Russia --RUS
+
+**DS**
+
+Then, we perform descriptive statistics on our combined DEWP risk factors and WB Indicators, listed below.
+The output of these statistics includes elements such as count, mean, standard deviation, 25th percentile, 50th
+percentile, and the 75th percentile of each of the listed risk factors and indicators below
+
+risk_in_2024 --> select DEWP "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
+freediscussion --> select DEWP "Citizens' ability to openly discuss political issues."
+efindex --> select DEWP variable representing percentage of "Ethnic Heterogeneity." 
+religiousfreedom --> select DEWP variable showing whether or not there is "Freedom of Religion." 
+discrimpop --> select DEWP variable representing "Portion of Population Coded as Being Discriminated Against (%)"
+GDP growth (annual %) --> select WB 'GDP Growth' indicator 
+GDP per capita (constant 2015 US$) --> select WB 'GDP per capita (constant 2015 US$)' indicator 
+Population growth (annual %) --> select WB 'Population growth (annual %)' indicator
+Population, total --> select WB 'Population, total' indicator 
+Urban population (% of total population) --> select WB 'Urban Population (%)' indicator 
+
+Next, we save these descriptive statistics for these risk factors/indicators
+
+**per-country avgs**
+
+The third step involves generating a Pearson correlation between a given country's risk for experiencing ongoing mass killing and its current GDP per capita. This involves selecting the relevant columns, listed below:
+
+Country
+risk_in_2024_mean (generated from step c above)
+GDP per capita (constant 2015 US$)_mean
+
+We save these correlations to a CSV file
+
+**correlations**
+
+The third step involves generating a Pearson correlation between 'risk_in_2024_mean' and all other DEWP risk factors and WB Indicators. This involves selecting the averages of all DEWP risk factors and WB indicators, listed below:
+
+risk_in_2024_mean --> select average of "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'", (Source 8)
+freediscussion_mean --> select average of "Citizens' ability to openly discuss political issues" (Source 9)
+efindex_mean --> select average of variable representing percentage of "Ethnic Heterogeneity" (Source 9)
+religiousfreedom_mean --> select average of variable showing whether or not there is "Freedom of Religion" (Source 9)
+discrimpop_mean --> select variable representing "Portion of Population Coded as Being Discriminated Against (%)" (Source 9)
+GDP growth (annual %)_mean --> select average of WB 'GDP Growth' indicator (Source 28)
+GDP per capita (constant 2015 US$)_mean --> select average of WB 'GDP per capita (constant 2015 US$)' indicator (Source 10)
+Population growth (annual %)_mean --> select average of 'Population growth (annual %)' (Source 11)
+Population, total_mean --> select average of 'Population, total' indicator (Source 12)
+Urban population (% of total population)_mean --> select average of 'Urban Population (%)' indicator (Source 13)
+
+This generates correlations across the Caucasus region, showing how each WB indicator is associated with a country's risk for experiencing ongoing mass killing
 
 Detailed data analysis for this project is documented via comments in the 'run_analysis.py' file.
 
+
+
+
 **How to produce the visualizations**
 
+First, we import the pandas and matplotlib libraries. Next, we generate three visualizations for each descriptive statistic calculated above
+
+**bar chart**
+compares the average risk of a given country experiencing ongoing mass killing in 2024 (Risk Score)
+
+to generate this bar chart by sorting each coutnries; ris fromhighest to lowest
+nexty we creat eh abr chart via plt.bar ,specify its axes via (x is cuntry) (y is average risk in 2024) then we add relevant tiles
+
+**scatterplot**
+shows association between a given country's Gross Domestic Product (GDP) per Capita and its respective Risk Score
+
+**horizontal bar chart**
+shows which WB Indicators are most strongly correlated with a country's risk fo experiencing ongoing mass killing in 2024
 
 
 Detailed data visualization for this project is documented via comments in the 'visualization_results.py' file.
