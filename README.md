@@ -81,7 +81,9 @@ To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary fo
 Next, under "Downloads", locate the abnner entitled "All 2025-26 Data (CSV)". Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically
 downloaded.
 
-To obtain the World Bank API data necessary for this project, navigate to the following website: https://earlywarningproject.ushmm.org/reports-and-downloads
+To obtain the World Bank API data necessary for this project, navigate to the following website: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation
+Next, under the "About the Indicators API," there will be a hyperlinked "Basic Call Structure," clicking this will take the user to the webpage instructing how to construct a basic API call to the base
+url ()
 
 **how to clean data**
 
