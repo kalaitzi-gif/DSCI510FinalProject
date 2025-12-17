@@ -101,7 +101,7 @@ For this project, the above was done for the following indicators ("Indicator na
 
 - Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
 
-The exact processes utilized for cleaning the data necessary for this project are detailed in the section headers of each file
+The exact processes utilized for collection the data necessary for this project are detailed in the section headers of each file
 
 
 **Data Cleaning Procedure**
@@ -112,7 +112,8 @@ Steps for the Data Cleaning Procedure are below:
 
 1.) Import pandas and json libraries (as described above)
 
-**STEP B**
+**STEP B: Load, clean, filter, and save processed DEWP data to reflect
+Caucasus countries' risk data for experiencing ongoing mass killing.**
 
 2.) Load the "WorldwideData_sra_2025.csv" file obtained in the 'get_data.py' file
 
@@ -150,7 +151,8 @@ Steps for the Data Cleaning Procedure are below:
 
 5.) Create and save a separate, filtered dataframe containing only the aforementioned risk factors of interest and the aforementioned countries. This step properly narrows the scope of  analysis required for Step 3 of this project (Data Analysis, "run_analysis.py"), which will analyze these data to reflect the risk of ongoing mass killing in the Caucasus countries.
 
-**STEP C**
+**STEP C: Load, clean, filter, and save processed WB API data in raw JSON format
+to reflect desired indicator names and indicator codes.**
 
 Loads, cleans, filters, and saves processed WB API data in raw JSON format, reflecting the desired indicator names and indicator codes.
 
@@ -191,11 +193,14 @@ Loads, cleans, filters, and saves processed WB API data in raw JSON format, refl
 - Indicator Value
 
 
-**STEP D**
+**STEP D: Standardize columns across DEWP CSV file and raw WB JSON file to
+merge the files in preparation for analysis in 'run_analysis.py'.**
 
-Standardizes column names across the DEWP CSV file and the raw WB JSON file to merge the files in preparation for analysis in 'run_analysis.py'.
+6.) Convert raw WB JSON data from long to wide format 
 
-In this step, we convert our WB JSON data from long to wide format. Next, we merge (outer) our processed 'filtered_dartmouth_df' with our processed 'wb_records_wide', based on the union of keys from both dataframes ('Country' and 'Year')
+7.) Perform outer merge on processed 'filtered_dartmouth_df' file with processed 'wb_records_wide' file, based on the union of keys from both dataframes ('Country' and 'Year')
+
+8.) Save merged file
 
 The exact processes utilized for cleaning the data necessary for this project are detailed in the section headers of each file
 
