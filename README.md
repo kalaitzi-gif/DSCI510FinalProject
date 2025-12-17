@@ -91,15 +91,15 @@ To obtain the World Bank API data necessary for this project (i.e., global indic
 
 For this project, the above was done for the following indicators ("Indicator name → Indicator Code"):
 
-1.) GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG)
+- GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG)
 
-2.) GDP per capita (constant 2015 US$) → (NY.GDP.PCAP.KD)
+- GDP per capita (constant 2015 US$) → (NY.GDP.PCAP.KD)
 
-3.) Population growth (annual %) → (SP.POP.GROW)
+- Population growth (annual %) → (SP.POP.GROW)
 
-4.) Population, total → (SP.POP.TOTL)
+- Population, total → (SP.POP.TOTL)
 
-5.) Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
+- Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
 
 The exact processes utilized for cleaning the data necessary for this project are detailed in the section headers of each file
 
@@ -114,30 +114,34 @@ Steps for the Data Cleaning Procedure are below:
 
 3.) Clean "WorldwideData_sra_2025.csv" file via column filtration of the following risk factors from CSV file:
 
-1.) ISO3
+- ISO3 Country Code
 
-2.) risk_in_2024
+- risk_in_2024
 
-3.) riskrank
+- riskrank
 
-4.) year
+- year
 
-5.) freediscussion
+- freediscussion
 
-6.) religiousfreedom
+- religiousfreedom
 
-7.) efindex
+- efindex
 
-8.) discrimpop
+- discrimpop
 
 
-Then, we define the five official Caucasus countries via their ISO3 country codes (ISO3166) for filtering Dartmouth EWP data, listed below ("country -- ISO3 code"):
+4.) To continue cleaning the Dartmouth EWP data, define the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code)"):
 
-Armenia -- ARM
-Azerbaijan -- AZE
-Georgia -- GEO
-Iran -- IRN
-Russia --RUS
+- Armenia (ARM)
+
+- Azerbaijan (AZE)
+
+- Georgia (GEO)
+
+- Iran (IRN)
+
+- Russia (RUS)
 
 
 Next, we create and save a separate, filtered dataframe containing only the risk factors/columns of interest and the aforementioned countries, thereby properly narrowing the scope of our analysis for the next stage. This stage will analyze these data to reflect the risk of ongoing mass killing in the Caucasus countries.
