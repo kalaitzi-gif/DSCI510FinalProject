@@ -39,7 +39,7 @@ The requirements for this project are the following libraries (via terminal):
 **How to run the code**
 
 In the terminal, navigate to the directory where the project folder is located. This can be done by utilizing the 'cd' terminal command, which stands for 'change directory'.
-for example:
+For example:
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject"
 
