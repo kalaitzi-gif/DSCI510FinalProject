@@ -92,9 +92,13 @@ To obtain the World Bank API data necessary for this project (i.e., global indic
 For this project, the above was done for the following indicators ("Indicator name → Indicator Code"):
 
 1.) GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG)
+
 2.) GDP per capita (constant 2015 US$) → (NY.GDP.PCAP.KD)
+
 3.) Population growth (annual %) → (SP.POP.GROW)
+
 4.) Population, total → (SP.POP.TOTL)
+
 5.) Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
 
 The exact processes utilized for cleaning the data necessary for this project are detailed in the section headers of each file
