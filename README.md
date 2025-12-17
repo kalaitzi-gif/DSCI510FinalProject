@@ -9,7 +9,7 @@ The team member for this project is Maria Popovic. Email, GitHub username, and U
 
 **USC ID:** 2532568719
 
-Below, I describe how to fulfill the necessary components for completing this project.
+Below, I outline the necessary components for completing this project.
 
 **How to install requirements for the project**
 
