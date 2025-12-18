@@ -358,10 +358,13 @@ This scatterplot shows the association between a given country's Gross Domestic 
 6.) Save scatterplot as a .png file as "Scatter_Risk_GDP"
 
 **STEP D: Generate Horizontal Bar Chart - WB INDICATORS VS RISK SCORE**
-This Horizontal Bar Chart shows which DEWP risk factors and WB Indicators are most strongly correlated with a country's risk of experiencing ongoing mass killing in 2024-2025
+This Horizontal Bar Chart shows which DEWP risk factors and WB Indicators are most or least correlated with a country's risk of experiencing ongoing mass killing in 2024-2025.
 
-shows which WB Indicators are most strongly correlated with a country's risk fo experiencing ongoing mass killing in 2024
+7.) To generate the horizontal bar chart, begin by sorting the visualization from negative to positive risk correlations.
 
+8.) Generate the  horizontal bar chart, specify the x-axis as "Risk Score Correlation", specify the y-axis as "Average Risk Score", and specify the title as "Risk Factors, Indicators vs. Risk Score."
+
+6.) Save scatterplot as a .png file as "Horizontal_Bar_Indicator_Risk"
 
 Detailed data visualization for this project is documented via comments in the 'visualization_results.py' file.
 
