@@ -100,7 +100,7 @@ For this project, the above was done for the following indicators ("Indicator na
 - Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
 
 
-**Data Collection Procedure
+**Data Collection Procedure**
 
 Steps for the Data Collection Procedure are below:
 
