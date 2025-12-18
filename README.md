@@ -10,19 +10,16 @@ The team member for this project is Maria Popovic. Email, GitHub username, and U
 
 **USC ID:** 2532568719
 
-Below, I outline the required components for completing this project.
+Below, I outline the required steps for completing this project.
 
-**INSERT HEADER HERE**
-**INSERT HEADER HERE**
-**INSERT HEADER HERE**
-**INSERT HEADER HERE**
-**INSERT HEADER HERE**
-**INSERT HEADER HERE**
-**INSERT HEADER HERE**
-**INSERT HEADER HERE**
-**INSERT HEADER HERE**
-**INSERT HEADER HERE**
-
+1.) **Project Virtual Environment Procedure**
+2.) **Project Installation Requirements**
+3.) **Code Running Procedure**
+4.) **Data Collection Description**
+5.) **Step 1: Data Collection**
+6.) **Step 2: Data Cleaning**
+7.) **Step 3: Data Analysis**
+8.) **Step 4: Data Visualization**
 
 
 
@@ -51,7 +48,7 @@ The output of these commands will be standard components necessary for setting u
 
 
 
-**Installation Requirements for Project**
+**Project Installation Requirements**
 
 **The requirements for this project are the following libraries (via terminal):**
 
@@ -462,7 +459,7 @@ The precise processes utilized for data analysis in this project are detailed in
 
 
 
-****Data Visualizations Procedure****
+**Step 4: Data Visualization**
 
 Steps for the Data Visualizations Procedure are below:
 
