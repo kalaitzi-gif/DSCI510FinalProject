@@ -121,19 +121,19 @@ Caucasus countries' risk data for experiencing ongoing mass killing.**
 
 - ISO3 Country Code
 
-- risk_in_2024 --> DEWP "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
+- risk_in_2024 → DEWP "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
 
-- riskrank --> **INPUT LABEL HERE**
+- riskrank → **INPUT LABEL HERE**
 
-- year --> **INPUT LABEL HERE**
+- year → **INPUT LABEL HERE**
 
-- freediscussion --> DEWP "Citizens' ability to openly discuss political issues."
+- freediscussion → DEWP "Citizens' ability to openly discuss political issues."
 
-- religiousfreedom --> select DEWP variable showing whether or not there is "Freedom of Religion."
+- religiousfreedom → select DEWP variable showing whether or not there is "Freedom of Religion."
 
-- efindex --> select DEWP variable representing percentage of "Ethnic Heterogeneity."
+- efindex → select DEWP variable representing percentage of "Ethnic Heterogeneity."
 
-- discrimpop --> select DEWP variable representing "Portion of Population Coded as Being Discriminated Against (%)"
+- discrimpop → select DEWP variable representing "Portion of Population Coded as Being Discriminated Against (%)"
 
 4.) To continue cleaning the Dartmouth EWP data, define the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code)"):
 
@@ -238,7 +238,7 @@ Steps for the Data Analysis Procedure are below:
 
 **STEP C: Generate Descriptive Statistics on DEWP Risk Factors and WB Indicators Per Caucasus Country.**
 
-4.) Perform the following descriptive statistics (below) on "merged_wb_dartmouth_df", for each of the quantitative DEWP risk factors and WB indicators (under "Combined DEWP Risk Factors and WB Indicators" ):
+4.) Perform the following descriptive statistics (below) on "merged_wb_dartmouth_df", for each of the quantitative DEWP risk factors and WB indicators (under "Combined DEWP Risk Factors and WB Indicators"):
 
 **Descriptive Statistics**
 
@@ -294,25 +294,25 @@ This data analysis step is performed to properly set up a scatterplot showing th
 
 8.) Generate a Pearson correlation between 'risk_in_2024_mean' and all other DEWP risk factors and WB Indicators. This involves selecting the averages ("..._mean" variables)of all DEWP risk factors and WB indicators, listed below:
 
-- risk_in_2024_mean --> average of "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
+- risk_in_2024_mean → average of "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
 
-- freediscussion_mean --> average of "Citizens' ability to openly discuss political issues"
+- freediscussion_mean → average of "Citizens' ability to openly discuss political issues"
 
-- efindex_mean --> average of variable representing percentage of "Ethnic Heterogeneity"
+- efindex_mean → average of variable representing percentage of "Ethnic Heterogeneity"
 
-- religiousfreedom_mean --> average of variable showing whether or not there is "Freedom of Religion"
+- religiousfreedom_mean → average of variable showing whether or not there is "Freedom of Religion"
 
-- discrimpop_mean --> variable representing "Portion of Population Coded as Being Discriminated Against (%)"
+- discrimpop_mean → variable representing "Portion of Population Coded as Being Discriminated Against (%)"
 
-- GDP growth (annual %)_mean --> average of WB 'GDP Growth' indicator
+- GDP growth (annual %)_mean → average of WB 'GDP Growth' indicator
 
-- GDP per capita (constant 2015 US$)_mean --> average of WB 'GDP per capita (constant 2015 US$)' indicator
+- GDP per capita (constant 2015 US$)_mean → average of WB 'GDP per capita (constant 2015 US$)' indicator
 
-- Population growth (annual %)_mean --> average of 'Population growth (annual %)'
+- Population growth (annual %)_mean → average of 'Population growth (annual %)'
 
-- Population, total_mean --> average of 'Population, total' indicator
+- Population, total_mean → average of 'Population, total' indicator
 
-- Urban population (% of total population)_mean --> average of 'Urban Population (%)' indicator
+- Urban population (% of total population)_mean → average of 'Urban Population (%)' indicator
 
 
 This procedure generates correlations across the Caucasus region, showing how strongly, positively, weakly, or negatively each DEWP risk factor and WB indicator is associated with a country's risk for experiencing ongoing mass killing. Generating these descriptive statistics, per-country averages, and Pearson correlations across the DEWP risk factors and AB indicators is necessary for completing Step 4 of this project (Data Visualization, "visualize_results.py").
