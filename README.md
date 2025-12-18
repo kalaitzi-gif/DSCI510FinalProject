@@ -218,19 +218,35 @@ Steps for the Data Analysis Procedure are below:
 1.) Import numpy and pandas libraries (as described above)
 
 
-**STEP B: Load merged Dartmouth EWP (DEWP) and World Bank API file, 'merged_wb_dartmouth.csv'.**
+**STEP B: Load merged Dartmouth EWP (DEWP) and World Bank API file**
 
-First, we import the pandas and numpy libraries. Next, we load the "merged_wb_dartmouth_df" file obtained in our 'clean_data.py' file. Next, we clean this file by first defining the five official Caucasus countries via their ISO3 country codes (ISO3166), listed below ("country -- ISO3 code"):
+1.) Load the "merged_wb_dartmouth_df" file obtained in Step 2 of this project (Data Cleaning, "clean_data.py")
 
-Armenia -- ARM
-Azerbaijan -- AZE
-Georgia -- GEO
-Iran -- IRN
-Russia --RUS
+2.) Begin cleaning "merged_wb_dartmouth_df" by defining the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code)")
 
-****Data Statistics Procedure****
+- Armenia (ARM)
 
-Then, we perform descriptive statistics on our combined DEWP risk factors and WB Indicators, listed below.
+- Azerbaijan (AZE)
+
+- Georgia (GEO)
+
+- Iran (IRN)
+
+- Russia (RUS)
+
+****Descriptive Statistics Procedure****
+
+3.) Perform the following descriptive statistics on "merged_wb_dartmouth_df", listed below:
+
+- Count
+- Mean
+- Standard deviation
+- 25th percentile
+- 50th percentile
+- 75th percentile
+- Maximum
+- Minimmum
+
 The output of these statistics includes elements such as count, mean, standard deviation, 25th percentile, 50th
 percentile, and the 75th percentile of each of the listed risk factors and indicators below
 
