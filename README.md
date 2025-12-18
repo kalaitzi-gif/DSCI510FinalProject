@@ -255,7 +255,7 @@ Procedure for Step 2: Data Cleaning is below:
 
 - "riskrank": Country ranking based on "estimated risk for onset of intrastate mass killing in 2024-25" (Source 2)
 
-- "year": **INPUT LABEL HERE**
+- "year": Year for corresponding model data (i.e., forecasts based on 2024 data, year is 2024) (Source 2)
 
 - "freediscussion": DEWP "Citizens' ability to openly discuss political issues." (Source 2)
 
