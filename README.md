@@ -431,7 +431,7 @@ This data analysis step is performed to properly set up a scatterplot showing th
 
 
 
-**Correlations Procedure**
+**WB-Risk Score Correlations Procedure**
 
 This data analysis step is performed to properly set up a horizontal bar chart showing which WB Indicators are most strongly correlated with a country's risk of experiencing ongoing mass killing in 2024-2025 (as shown in Step 4 of this project, "Data Visualization," in "visualize results.py").
 
