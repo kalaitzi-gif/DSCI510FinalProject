@@ -234,7 +234,7 @@ Steps for the Data Analysis Procedure are below:
 
 ****Descriptive Statistics Procedure****
 
-3.) Perform the following descriptive statistics (below) on "merged_wb_dartmouth_df", on each of the listed risk factors and indicators (below descriptive statistics):
+3.) Perform the following descriptive statistics (below) on "merged_wb_dartmouth_df", for each of the quantitative DEWP risk factors and WB indicators (under "Combined DEWP Risk Factors and WB Indicators" ):
 
 **Descriptive Statistics**
 
