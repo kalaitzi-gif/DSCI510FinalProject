@@ -13,12 +13,19 @@ The team member for this project is Maria Popovic. Email, GitHub username, and U
 Below, I outline the required steps for completing this project.
 
 1.) **Project Virtual Environment Procedure**
+
 2.) **Project Installation Requirements**
+
 3.) **Code Running Procedure**
+
 4.) **Data Collection Description**
+
 5.) **Step 1: Data Collection**
+
 6.) **Step 2: Data Cleaning**
+
 7.) **Step 3: Data Analysis**
+
 8.) **Step 4: Data Visualization**
 
 
