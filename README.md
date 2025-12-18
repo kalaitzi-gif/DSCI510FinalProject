@@ -104,8 +104,6 @@ For this project, the above was done for the following indicators ("Indicator na
 
 Steps for the Data Collection Procedure are below:
 
-The steps involved in this file are the following:
-
 **STEP A: Import Libraries**
 
 1.) Import pandas, requests, and json libraries (as described above)
