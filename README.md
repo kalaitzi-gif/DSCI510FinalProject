@@ -337,28 +337,29 @@ Steps for the Data Visualizations Procedure are below:
 
 2.) Generate three visualizations for each descriptive statistic calculated above
 
-**STEP B: Generate Bar Chart**
+**STEP B: Generate Bar Chart - 2024 RISK SCORES BY COUNTRY**
 This bar chart compares the average risk of a given country experiencing ongoing mass killing in 2024-2025 (Risk Score)
 
-**STEP C: Generate Scatterplot**
-3.) STEP C:   showing association between a given country's Gross Domestic Product (GDP) per Capita and its respective Risk Score
+3.) To generate the bar chart, begin by selecting the "Country" as the label and the "risk_in_2024_mean" to serve as the bar height.
 
+4.) Sort the visualization of countries from highest risk to lowest risk
 
-**STEP D: Generate Horizontal Bar Chart**
-4.) showing which WB Indicators are most strongly correlated with a country's risk fo experiencing ongoing mass killing in 2024-2025
+5.) Generate the bar chart, specifying x-axis ("Country"), y-axis ("risk_in_2024_mean"), and title, "2024 Average Risk by Caucasus Country." 
 
+6.) Save bar chart as a .png file as "Bar_Risk_by_Country"
 
+**STEP C: Generate Scatterplot -  GDP PER CAPITA vs. RISK SCORE**
+This scatterplot shows the association between a given country's Gross Domestic Product (GDP) per Capita and its respective Risk Score
 
-**bar chart**
-compares the average risk of a given country experiencing ongoing mass killing in 2024 (Risk Score)
+7.) To generate the scatterplot, begin by creating a dataframe with one row per country, one economic indicator, and one risk outcome per country 
 
-to generate this bar chart by sorting each coutnries; ris fromhighest to lowest
-nexty we creat eh abr chart via plt.bar ,specify its axes via (x is cuntry) (y is average risk in 2024) then we add relevant tiles
+8.) Generate the scatterplot, specifying x-axis data position as "GDP per capita (constant 2015 US$)_mean" and specifying the y-axis data position as "risk_in_2024_mean", and title, "2024 Average Risk by Caucasus Country"
 
-**scatterplot**
-shows association between a given country's Gross Domestic Product (GDP) per Capita and its respective Risk Score
+6.) Save scatterplot as a .png file as "Scatter_Risk_GDP"
 
-**horizontal bar chart**
+**STEP D: Generate Horizontal Bar Chart - WB INDICATORS VS RISK SCORE**
+This Horizontal Bar Chart shows which DEWP risk factors and WB Indicators are most strongly correlated with a country's risk of experiencing ongoing mass killing in 2024-2025
+
 shows which WB Indicators are most strongly correlated with a country's risk fo experiencing ongoing mass killing in 2024
 
 
