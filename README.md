@@ -121,20 +121,19 @@ Caucasus countries' risk data for experiencing ongoing mass killing.**
 
 - ISO3 Country Code
 
-- risk_in_2024
+- risk_in_2024 --> DEWP "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
 
-- riskrank
+- riskrank --> **INPUT LABEL HERE**
 
-- year
+- year --> **INPUT LABEL HERE**
 
-- freediscussion
+- freediscussion --> DEWP "Citizens' ability to openly discuss political issues."
 
-- religiousfreedom
+- religiousfreedom --> select DEWP variable showing whether or not there is "Freedom of Religion."
 
-- efindex
+- efindex --> select DEWP variable representing percentage of "Ethnic Heterogeneity."
 
-- discrimpop
-
+- discrimpop --> select DEWP variable representing "Portion of Population Coded as Being Discriminated Against (%)"
 
 4.) To continue cleaning the Dartmouth EWP data, define the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code)"):
 
@@ -237,6 +236,8 @@ Steps for the Data Analysis Procedure are below:
 
 3.) Perform the following descriptive statistics (below) on "merged_wb_dartmouth_df", on each of the listed risk factors and indicators (below descriptive statistics):
 
+**Descriptive Statistics**
+
 - Count
 - Mean
 - Standard deviation
@@ -246,17 +247,17 @@ Steps for the Data Analysis Procedure are below:
 - Maximum
 - Minimum
 
-These statistics are performed on each of the listed risk factors and indicators below:
+**Combined DEWP Risk Factors and WB Indicators**
 
-- risk_in_2024 --> select DEWP "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
+- risk_in_2024
 
-- freediscussion --> select DEWP "Citizens' ability to openly discuss political issues."
+- freediscussion
 
-- efindex --> select DEWP variable representing percentage of "Ethnic Heterogeneity."
+- efindex
 
-- religiousfreedom --> select DEWP variable showing whether or not there is "Freedom of Religion."
+- religiousfreedom
 
-- discrimpop --> select DEWP variable representing "Portion of Population Coded as Being Discriminated Against (%)"
+- discrimpop
 
 - GDP growth (annual %) --> select WB 'GDP Growth' indicator
 
