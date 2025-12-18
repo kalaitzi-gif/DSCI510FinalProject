@@ -242,6 +242,8 @@ Steps for the Data Analysis Procedure are below:
 
 **Descriptive Statistics**
 
+This data analysis step is performed to properly set up a bar chart comparing the average risk of a given country to experience ongoing mass killing in 2024-2025 (as shown in Step 4 of this project, "Data Visualization," in 'visualize results.py').
+
 - Count
 - Mean
 - Standard deviation
@@ -285,34 +287,36 @@ This data analysis step is performed to properly set up a scatterplot showing th
 6.) Generate a Pearson correlation between a Caucasus country's risk score and its current GDP per capita. This involves selecting the relevant columns, listed below:
 
 - Country
-- risk_in_2024_mean (generated from step c above)
+- risk_in_2024_mean (generated from Step C above)
 - GDP per capita (constant 2015 US$)_mean
 
 7.) Save these correlations to a CSV file
 
 **Correlations Procedure**
 
+This data analysis step is performed to properly set up a horizontal bar chart showing which WB Indicators are most strongly correlated with a country's risk of experiencing ongoing mass killing in 2024-2025 (as shown in Step 4 of this project, "Data Visualization," in 'visualize results.py').
+
 8.) Generate a Pearson correlation between 'risk_in_2024_mean' and all other DEWP risk factors and WB Indicators. This involves selecting the averages ("..._mean" variables)of all DEWP risk factors and WB indicators, listed below:
 
-- risk_in_2024_mean → average of "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
+- risk_in_2024_mean → Average of "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
 
-- freediscussion_mean → average of "Citizens' ability to openly discuss political issues"
+- freediscussion_mean → Average of "Citizens' ability to openly discuss political issues"
 
-- efindex_mean → average of variable representing percentage of "Ethnic Heterogeneity"
+- efindex_mean → Average of variable representing percentage of "Ethnic Heterogeneity"
 
-- religiousfreedom_mean → average of variable showing whether or not there is "Freedom of Religion"
+- religiousfreedom_mean → Average of variable showing whether or not there is "Freedom of Religion"
 
-- discrimpop_mean → variable representing "Portion of Population Coded as Being Discriminated Against (%)"
+- discrimpop_mean → Average variable representing "Portion of Population Coded as Being Discriminated Against (%)"
 
-- GDP growth (annual %)_mean → average of WB 'GDP Growth' indicator
+- GDP growth (annual %)_mean → Average of WB 'GDP Growth' indicator
 
-- GDP per capita (constant 2015 US$)_mean → average of WB 'GDP per capita (constant 2015 US$)' indicator
+- GDP per capita (constant 2015 US$)_mean → Average of WB 'GDP per capita (constant 2015 US$)' indicator
 
-- Population growth (annual %)_mean → average of 'Population growth (annual %)'
+- Population growth (annual %)_mean → Average of 'Population growth (annual %)'
 
-- Population, total_mean → average of 'Population, total' indicator
+- Population, total_mean → Average of 'Population, total' indicator
 
-- Urban population (% of total population)_mean → average of 'Urban Population (%)' indicator
+- Urban population (% of total population)_mean → Average of 'Urban Population (%)' indicator
 
 
 This procedure generates correlations across the Caucasus region, showing how strongly, positively, weakly, or negatively each DEWP risk factor and WB indicator is associated with a country's risk for experiencing ongoing mass killing. Generating these descriptive statistics, per-country averages, and Pearson correlations across the DEWP risk factors and AB indicators is necessary for completing Step 4 of this project (Data Visualization, "visualize_results.py").
@@ -324,7 +328,26 @@ Detailed data analysis for this project is documented via comments in the 'run_a
 
 ****Data Visualizations Procedure****
 
-First, we import the pandas and matplotlib libraries. Next, we generate three visualizations for each descriptive statistic calculated above
+
+Steps for the Data Visualizations Procedure are below:
+
+**STEP A: Import pandas and matplotlib libraries**
+
+1.) Import pandas and matplotlib libraries (as described above)
+
+2.) Generate three visualizations for each descriptive statistic calculated above
+
+**STEP B: Generate Bar Chart**
+This bar chart compares the average risk of a given country experiencing ongoing mass killing in 2024-2025 (Risk Score)
+
+**STEP C: Generate Scatterplot**
+3.) STEP C:   showing association between a given country's Gross Domestic Product (GDP) per Capita and its respective Risk Score
+
+
+**STEP D: Generate Horizontal Bar Chart**
+4.) showing which WB Indicators are most strongly correlated with a country's risk fo experiencing ongoing mass killing in 2024-2025
+
+
 
 **bar chart**
 compares the average risk of a given country experiencing ongoing mass killing in 2024 (Risk Score)
