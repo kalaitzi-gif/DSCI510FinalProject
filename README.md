@@ -12,29 +12,54 @@ The team member for this project is Maria Popovic. Email, GitHub username, and U
 
 Below, I outline the necessary components for completing this project.
 
+
+
+
+**Project Virtual Environment Procedure**
+
+The steps required to create the virtual environment for this project are the following:
+
+1.) Open terminal application (base) mariakalaitzidis@Marias-MacBook-Air MyFinalProject % python -m venv FinalProjectDSCI510Fall2025
+
+2.) Navigate to the directory you wish to store the main project folder
+
+3.) Enter "python -m venv [NameOfProjectFolder]"
+
+4.) Press "Enter"
+
+The output of these commands will be standard components necessary for setting up a Python virtual environment (shown below):
+
+1.) bin
+2.) include
+3.) lib
+4.) pyvenv.cfg
+
+
+
+
 **Installation Requirements for Project**
 
 **The requirements for this project are the following libraries (via terminal):**
 
 **1.) Import pandas library (to load, filter, and save dataset)**
 - Loaded library via rendering statement in terminal "import pandas" (as pd)
-- Utilized in 'get_data.py', 'clean_data.py', 'run_analysis.py', 'visualize_results.py.'
+- Utilized in "get_data.py", "clean_data.py", "run_analysis.py", "visualize_results.py"
 
 **2.) Import requests module to retrieve webpage**
 - Loaded library via rendering statement in terminal "import requests"
-- Utilized in 'get_data.py.'
+- Utilized in "get_data.py."
 
 **3.) Import JSON module to relay API responses and work with JSON-formatted files**
 - Loaded  library via rendering statement in terminal "import json"
-- Utilized in 'get_data.py', 'clean_data.py.'
+- Utilized in "get_data.py", "clean_data.py"
 
 **4.) Import numpy library (for mathematical functions: linear algebra, random numbers)**
 - Loaded library via rendering statement in terminal "import numpy" (as np)
-- Utilized in 'run_analysis.py', 
+- Utilized in "run_analysis.py"
 
 **5.) Import the matplotlib library for visualization of plotting**
 - Loaded via rendering statement in terminal "import matplotlib" (as plt)
-- Utilized in 'visualize_results.py.'
+- Utilized in "visualize_results.py"
 
 
 
@@ -85,9 +110,10 @@ To run the 'visualize_results.py' file, type the following in the terminal ("pyt
 
 **Data Collection Description**
 
-To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the Dartmouth Early Warning Project (DEWP) "Reports & Downloads" webpage: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads", locate the banner entitled "All 2025-26 Data (CSV)". Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically downloaded.
 
-To obtain the World Bank API data necessary for this project (i.e., global indicator names, codes, and values), navigate to the World Bank "About the Indicators API Documentation" webpage: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation Next, under the "About the Indicators API," there will be a hyperlinked "Basic Call Structure," Clicking this will take the user to the webpage instructing how to construct a basic API call to the base url to scrape indicator names and indicator codes (i.e., scraping the 'Population, total' indicator requires the user to pass the indicator code, in this case "SP.POP.TOTL" into the bease url). In turn, this will generate the raw JSON format of the indicator's name, value, and code.
+To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the Dartmouth Early Warning Project (DEWP) "Reports & Downloads" webpage: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads," locate the banner entitled "All 2025-26 Data (CSV)." Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically downloaded.
+
+To obtain the World Bank API data necessary for this project (i.e., global indicator names, codes, and values), navigate to the World Bank "About the Indicators API Documentation" webpage: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation Next, under the "About the Indicators API," there will be a hyperlinked "Basic Call Structure," Clicking this will take the user to the webpage instructing how to construct a basic API call to the base URL to scrape indicator names and indicator codes (i.e., scraping the 'Population, total' indicator requires the user to pass the indicator code, in this case "SP.POP.TOTL" into the bease URL). In turn, this will generate the raw JSON format of the indicator's name, value, and code.
 
 For this project, the above was done for the following indicators ("Indicator name → Indicator Code"):
 
@@ -104,9 +130,10 @@ For this project, the above was done for the following indicators ("Indicator na
 
 
 
-**Data Collection Procedure**
+**Step 1: Data Collection**
 
-Steps for the Data Collection Procedure are below:
+
+Procedure for Step 1: Data Collection is below:
 
 
 **STEP A: Import Libraries**
@@ -116,7 +143,7 @@ Steps for the Data Collection Procedure are below:
 
 **STEP B: Load and save DEWP global risk scores**
 
-2.) 'WorldwideData_sra_2025.csv', showing global risks of countries experiencing ongoing mass killing.
+2.) "WorldwideData_sra_2025.csv", showing global risks of countries experiencing ongoing mass killing.
 
 3.) Save raw file in original CSV, "RAW_Caucasus_RiskData_2025.csv"
 
@@ -136,28 +163,28 @@ Steps for the Data Collection Procedure are below:
 - Russia (RUS)
 
 
-4.) Define WB indicators of interest in a dictionary (Indicator names (key) and WB indicator codes (value)), listed below ("Indicator name → Indicator Code")
+4.) Define WB indicators of interest in a dictionary (Indicator names [key] and WB indicator codes [value]), listed below ("Indicator name : Indicator Code")
 
-- GDP per capita, PPP (constant 2021 international $) → NY.GDP.PCAP.KD
+- GDP per capita, PPP (constant 2021 international $) : NY.GDP.PCAP.KD
 
-- GDP Growth (annual %) → NY.GDP.MKTP.KD.ZG
+- GDP Growth (annual %) : NY.GDP.MKTP.KD.ZG
 
-- Total Population → SP.POP.TOTL
+- Total Population : SP.POP.TOTL
 
-- Urban population (% of total population) → SP.URB.TOTL.IN.ZS
+- Urban population (% of total population) : SP.URB.TOTL.IN.ZS
 
-- Population Growth (annual %) → SP.POP.GROW
+- Population Growth (annual %) : SP.POP.GROW
 
-- Government Effectiveness (Estimate) → GE.EST
+- Government Effectiveness (Estimate) : GE.EST
 
-- Rule of Law → RL.EST
+- Rule of Law : RL.EST
 
-- Secondary School Enrollment (% gross) → SE.SEC.ENRR
+- Secondary School Enrollment (% gross) : SE.SEC.ENRR
 
-- Human Capital Index (HCI) (scale 0-1) → HD.HCI.OVRL
+- Human Capital Index (HCI) (scale 0-1) : HD.HCI.OVRL
 
 
-As noted in the final report, the following indicators were selected for the remainder of the project.
+As noted in the final report, the following indicators were selected for the project.
 
 - GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG)
 
@@ -177,46 +204,49 @@ As noted in the final report, the following indicators were selected for the rem
 7.) Save WB API indicator data as a raw JSON file
 
 
-The exact processes utilized for data collection necessary for this project are detailed in the section headers of each file
+The precise processes utilized for data collection necessary for this project are detailed in the "get_data.py" file required for Step 1: Data Collection
 
 
 
 
-**Data Cleaning Procedure**
 
-Steps for the Data Cleaning Procedure are below:
+**Step 2: Data Cleaning**
+
+
+Procedure for Step 2: Data Cleaning is below:
+
 
 **STEP A: Import Libraries**
 
 1.) Import pandas and json libraries (as described above)
 
 
-
-
 **STEP B: Load, clean, filter, and save processed DEWP data to reflect
 Caucasus countries' risk data for experiencing ongoing mass killing.**
 
-2.) Load the "WorldwideData_sra_2025.csv" file obtained in the 'get_data.py' file
+This step loads, cleans, filters, and saves the processed DEWP data to reflect Caucasus countries' risks of experiencing ongoing mass killing.**
+
+2.) Load the "WorldwideData_sra_2025.csv" file obtained in the "get_data.py" file 
 
 3.) Clean "WorldwideData_sra_2025.csv" file via column filtration of the following risk factors from the CSV file:
 
-- ISO3 Country Code
+- ISO3 Country Code (ISO3166) (Source 3)
 
-- risk_in_2024 → DEWP "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
+- risk_in_2024: DEWP "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'" (Source 1)
 
-- riskrank → **INPUT LABEL HERE**
+- riskrank: Country ranking based on "estimated risk for onset of intrastate mass killing in 2024-25" (Source 2)
 
-- year → **INPUT LABEL HERE**
+- year: **INPUT LABEL HERE** 
 
-- freediscussion → DEWP "Citizens' ability to openly discuss political issues."
+- freediscussion: DEWP "Citizens' ability to openly discuss political issues." (Source 2)
 
-- religiousfreedom → select DEWP variable showing whether or not there is "Freedom of Religion."
+- religiousfreedom: DEWP factor showing whether or not there is "Freedom of Religion." (Source 2)
 
-- efindex → select DEWP variable representing percentage of "Ethnic Heterogeneity."
+- efindex: DEWP factor representing percentage of "Ethnic Heterogeneity" (Source 2)
 
-- discrimpop → select DEWP variable representing "Portion of Population Coded as Being Discriminated Against (%)."
+- discrimpop: DEWP factor representing "Portion of Population Coded as Being Discriminated Against (%)" (Source 2)
 
-4.) To continue cleaning the Dartmouth EWP data, define the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country [ISO3 code]"):
+4.) To continue cleaning the Dartmouth EWP data, define the five officially recognized Caucasus countries by respective ISO3 country codes, listed below ("country [ISO3 code]"):
 
 - Armenia (ARM)
 
@@ -235,8 +265,6 @@ Caucasus countries' risk data for experiencing ongoing mass killing.**
 
 **STEP C: Load, clean, filter, and save processed WB API data in raw JSON format
 to reflect desired indicator names and indicator codes.**
-
-Loads, cleans, filters, and saves processed WB API data in raw JSON format, reflecting the desired indicator names and indicator codes.
 
 6.) Load the "RAW_WB_Caucasus_2025.json" file (obtained in Step 1, Data Collection, in the "get_data.py" file)
 
@@ -286,14 +314,14 @@ merge the files in preparation for analysis in 'run_analysis.py'.**
 
 13.) Save merged file
 
-The exact processes utilized for cleaning the data necessary for this project are detailed in the section headers of each file
+The precise processes utilized for data cleaning necessary for this project are detailed in the "clean_data.py" file required for Step 2: Data Cleaning.
 
 
 
 
-**Data Analysis Procedure**
+**Step 3: Data Analysis**
 
-Steps for the Data Analysis Procedure are below:
+Procedure for Step 3: Data Analysis is below:
 
 **STEP A: Import Libraries**
 
@@ -414,7 +442,7 @@ This data analysis step is performed to properly set up a horizontal bar chart s
 
 This procedure generates correlations across the Caucasus region, showing how strongly, positively, weakly, or negatively each DEWP risk factor and WB indicator is associated with a country's risk for experiencing ongoing mass killing. Generating these descriptive statistics, per-country averages, and Pearson correlations across the DEWP risk factors and AB indicators is necessary for completing Step 4 of this project (Data Visualization, "visualize_results.py").
 
-Detailed data analysis for this project is documented via comments in the 'run_analysis.py' file.
+The precise processes utilized for data analysis necessary for this project are detailed in the "run_analysis.py" file required for Step 3: Data Analysis.
 
 
 
@@ -462,3 +490,11 @@ This Horizontal Bar Chart shows which DEWP risk factors and WB Indicators are mo
 6.) Save scatterplot as a .png file as "Horizontal_Bar_Indicator_Risk"
 
 Detailed data visualization for this project is documented via comments in the 'visualization_results.py' file
+
+
+
+Consulted Suoprce:
+
+1.) https://earlywarningproject.ushmm.org/reports/countries-at-risk-for-intrastate-mass-killing-2024-25-early-warning-project-statistical-risk-assessment-results
+2.) https://earlywarningproject.ushmm.org/reports-and-downloads (WorldwideData_sra_2025.csv)
+3.) https://www.iso.org/iso-3166-country-codes.html
