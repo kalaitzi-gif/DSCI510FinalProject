@@ -80,42 +80,42 @@ The output of these commands will be standard components necessary for setting u
 
 **Code Running Procedure**
 
-In the terminal, navigate to the directory where the project folder is located. This can be done by utilizing the 'cd' terminal command, which stands for 'change directory'.
+In the terminal, navigate to the directory where the project folder is located. This can be done by utilizing the "cd" terminal command, which stands for "change directory".
 For example, to navigate to the directory where this project is located, one could type the following command into the terminal ("cd" followed by file path):
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject"
 
 **For each required code block of this project, one would navigate to the following directories in the terminal**
 
-**1.) To retrieve and run 'get_data.py', navigate to the following directory using the path below:**
+**1.) To retrieve and run "get_data.py", navigate to the following directory using the path below:**
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/data/raw"
 
-To run the 'get_data.py' file, type the following in the terminal ("python", followed by the file you wish to run):
+To run the "get_data.py" file, type the following in the terminal ("python", followed by the file you wish to run):
 
 "python get_data.py"
 
-**2.) To retrieve and run 'clean_data.py', navigate to the following directory using the path below:**
+**2.) To retrieve and run "clean_data.py", navigate to the following directory using the path below:**
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/data/processed"
 
-To run the 'clean_data.py' file, type the following in the terminal ("python", followed by the file you wish to run):
+To run the "clean_data.py" file, type the following in the terminal ("python", followed by the file you wish to run):
 
 "python clean_data.py"
 
-**3.) To retrieve and run 'run_analysis.py', navigate to the following directory using the path below:**
+**3.) To retrieve and run "run_analysis.py", navigate to the following directory using the path below:**
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/src"
 
-To run the 'run_analysis.py' file, type the following in the terminal ("python", followed by the file you wish to run):
+To run the "run_analysis.py" file, type the following in the terminal ("python", followed by the file you wish to run):
 
 "python run_analysis.py"
 
-**4.) To retrieve and run 'visualize_results.py', navigate to the following directory using the path below**
+**4.) To retrieve and run "visualize_results.py", navigate to the following directory using the path below**
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/src"
 
-To run the 'visualize_results.py' file, type the following in the terminal ("python", followed by the file you wish to run):
+To run the "visualize_results.py" file, type the following in the terminal ("python", followed by the file you wish to run):
 
 "python visualize_results.py"
 
@@ -127,7 +127,7 @@ To run the 'visualize_results.py' file, type the following in the terminal ("pyt
 
 To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the Dartmouth Early Warning Project (DEWP) "Reports & Downloads" webpage: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads," locate the banner entitled "All 2025-26 Data (CSV)." Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically downloaded.
 
-To obtain the World Bank API data necessary for this project (i.e., global indicator names, codes, and values), navigate to the World Bank "About the Indicators API Documentation" webpage: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation Next, under the "About the Indicators API," there will be a hyperlinked "Basic Call Structure," Clicking this will take the user to the webpage instructing how to construct a basic API call to the base URL to scrape indicator names and indicator codes (i.e., scraping the 'Population, total' indicator requires the user to pass the indicator code, in this case "SP.POP.TOTL" into the bease URL). In turn, this will generate the raw JSON format of the indicator's name, value, and code.
+To obtain the World Bank API data necessary for this project (i.e., global indicator names, codes, and values), navigate to the World Bank "About the Indicators API Documentation" webpage: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation Next, under the "About the Indicators API," there will be a hyperlinked "Basic Call Structure," Clicking this will take the user to the webpage instructing how to construct a basic API call to the base URL to scrape indicator names and indicator codes (i.e., scraping the "Population, total" indicator requires the user to pass the indicator code, in this case "SP.POP.TOTL" into the bease URL). In turn, this will generate the raw JSON format of the indicator's name, value, and code.
 
 For this project, the above was done for the following indicators ("Indicator name → Indicator Code"):
 
@@ -317,11 +317,11 @@ Procedure for Step 2: Data Cleaning is below:
 
 
 
-**STEP D: Standardize columns across DEWP CSV file and raw WB JSON file to merge the files in preparation for analysis in 'run_analysis.py'**
+**STEP D: Standardize columns across DEWP CSV file and raw WB JSON file to merge the files in preparation for analysis in "run_analysis.py"**
 
 11.) Convert raw WB JSON data from long to wide format 
 
-12.) Perform outer merge on processed 'filtered_dartmouth_df' file with processed 'wb_records_wide' file, based on the union of keys from both dataframes ("Country" and "Year")
+12.) Perform outer merge on processed "filtered_dartmouth_df" file with processed "wb_records_wide" file, based on the union of keys from both dataframes ("Country" and "Year")
 
 13.) Save merged file
 
@@ -369,7 +369,7 @@ Procedure for Step 3: Data Analysis is below:
 
 **Descriptive Statistics**
 
-This data analysis step is performed to properly set up a bar chart comparing the average risk of a given country to experience ongoing mass killing in 2024-2025 (as shown in Step 4 of this project, "Data Visualization," in 'visualize results.py').
+This data analysis step is performed to properly set up a bar chart comparing the average risk of a given country to experience ongoing mass killing in 2024-2025 (as shown in Step 4 of this project, "Data Visualization," in "visualize results.py").
 
 - Count
 - Mean
@@ -414,7 +414,7 @@ Below are the output variables of the DEWP risk factors and WB indicators after 
 
 **Per-Country Averages Procedure**
 
-This data analysis step is performed to properly set up a scatterplot showing the correlation between GDP and risk for each country (as shown in Step 4 of this project, "Data Visualization," in 'visualize results.py').
+This data analysis step is performed to properly set up a scatterplot showing the correlation between GDP and risk for each country (as shown in Step 4 of this project, "Data Visualization," in "visualize results.py").
 
 6.) Generate a Pearson correlation between a Caucasus country's Risk Score and its current GDP per capita. This involves selecting the relevant columns, listed below:
 
@@ -429,7 +429,7 @@ This data analysis step is performed to properly set up a scatterplot showing th
 
 **Correlations Procedure**
 
-This data analysis step is performed to properly set up a horizontal bar chart showing which WB Indicators are most strongly correlated with a country's risk of experiencing ongoing mass killing in 2024-2025 (as shown in Step 4 of this project, "Data Visualization," in 'visualize results.py').
+This data analysis step is performed to properly set up a horizontal bar chart showing which WB Indicators are most strongly correlated with a country's risk of experiencing ongoing mass killing in 2024-2025 (as shown in Step 4 of this project, "Data Visualization," in "visualize results.py").
 
 8.) Generate a Pearson correlation between "risk_in_2024_mean" and all other DEWP risk factors and WB Indicators. This involves selecting the averages ("..._mean" variables)of all DEWP risk factors and WB indicators, listed below:
 
