@@ -131,15 +131,15 @@ To obtain the World Bank API data necessary for this project (i.e., global indic
 
 For this project, the above was done for the following indicators ("Indicator name → Indicator Code"):
 
-- GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG) (Source 4)
+- "GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG)" (Source 4)
 
-- GDP per capita (constant 2015 US$) → (NY.GDP.PCAP.KD) (Source 5)
+- "GDP per capita (constant 2015 US$) → (NY.GDP.PCAP.KD)" (Source 5)
 
-- Population growth (annual %) → (SP.POP.GROW) (Source 6)
+- "Population growth (annual %) → (SP.POP.GROW)" (Source 6)
 
-- Population, total → (SP.POP.TOTL) (Source 7)
+- "Population, total → (SP.POP.TOTL)" (Source 7)
 
-- Urban population (% of total population) → (SP.URB.TOTL.IN.ZS) (Source 8)
+- "Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)" (Source 8)
 
 
 
@@ -155,7 +155,7 @@ Procedure for Step 1: Data Collection is below:
 1.) Import pandas, requests, and json libraries (as described above)
 
 
-**STEP B: Load and save DEWP global risk scores**
+**STEP B: Load and save DEWP global Risk Scores**
 
 2.) "WorldwideData_sra_2025.csv", showing global risks of countries experiencing ongoing mass killing.
 
@@ -179,36 +179,36 @@ Procedure for Step 1: Data Collection is below:
 
 4.) Define WB indicators of interest in a dictionary (Indicator names [key] and WB indicator codes [value]), listed below ("Indicator name : Indicator Code")
 
-- GDP per capita, PPP (constant 2021 international $) : NY.GDP.PCAP.KD
+- "GDP per capita, PPP (constant 2021 international $) : NY.GDP.PCAP.KD"
 
-- GDP Growth (annual %) : NY.GDP.MKTP.KD.ZG
+- "GDP Growth (annual %) : NY.GDP.MKTP.KD.ZG"
 
-- Total Population : SP.POP.TOTL
+- "Total Population : SP.POP.TOTL"
 
-- Urban population (% of total population) : SP.URB.TOTL.IN.ZS
+- "Urban population (% of total population) : SP.URB.TOTL.IN.ZS"
 
-- Population Growth (annual %) : SP.POP.GROW
+- "Population Growth (annual %) : SP.POP.GROW"
 
-- Government Effectiveness (Estimate) : GE.EST (Source 9)
+- "Government Effectiveness (Estimate) : GE.EST" (Source 9)
 
-- Rule of Law : RL.EST (Source 10)
+- "Rule of Law : RL.EST" (Source 10)
 
-- Secondary School Enrollment (% gross) : SE.SEC.ENRR (Source 11)
+- "Secondary School Enrollment (% gross) : SE.SEC.ENRR" (Source 11)
 
-- Human Capital Index (HCI) (scale 0-1) : HD.HCI.OVRL (Source 12)
+- "Human Capital Index (HCI) (scale 0-1) : HD.HCI.OVRL" (Source 12)
 
 
 As noted in the final report, the following indicators were selected for the project.
 
-- GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG)
+- "GDP growth (annual %)" → (NY.GDP.MKTP.KD.ZG)
 
-- GDP per capita (constant 2015 US$) → (NY.GDP.PCAP.KD)
+- "GDP per capita (constant 2015 US$)" → (NY.GDP.PCAP.KD)
 
-- Population growth (annual %) → (SP.POP.GROW)
+- "Population growth (annual %)" → (SP.POP.GROW)
 
-- Population, total → (SP.POP.TOTL)
+- "Population, total" → (SP.POP.TOTL)
 
-- Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
+- "Urban population (% of total population)" → (SP.URB.TOTL.IN.ZS)
 
 
 5.) Run a nested loop over the above indicator names and indicator codes
@@ -245,19 +245,19 @@ Procedure for Step 2: Data Cleaning is below:
 
 - ISO3 Country Code (ISO3166) (Source 3)
 
-- risk_in_2024: DEWP "country's Estimated Risk for "onset of intrastate mass killing in 2024-25" (Source 1)
+- "risk_in_2024": DEWP "country's Estimated Risk for "onset of intrastate mass killing in 2024-25" (Source 1)
 
-- riskrank: Country ranking based on "estimated risk for onset of intrastate mass killing in 2024-25" (Source 2)
+- "riskrank": Country ranking based on "estimated risk for onset of intrastate mass killing in 2024-25" (Source 2)
 
-- year: **INPUT LABEL HERE**
+- "year": **INPUT LABEL HERE**
 
-- freediscussion: DEWP "Citizens' ability to openly discuss political issues." (Source 2)
+- "freediscussion": DEWP "Citizens' ability to openly discuss political issues." (Source 2)
 
-- religiousfreedom: DEWP factor showing whether or not there is "Freedom of Religion." (Source 2)
+- "religiousfreedom": DEWP factor showing whether or not there is "Freedom of Religion." (Source 2)
 
-- efindex: DEWP factor representing percentage of "Ethnic Heterogeneity" (Source 2)
+- "efindex": DEWP factor representing percentage of "Ethnic Heterogeneity" (Source 2)
 
-- discrimpop: DEWP factor representing "Portion of Population Coded as Being Discriminated Against (%)" (Source 2)
+- "discrimpop": DEWP factor representing "Portion of Population Coded as Being Discriminated Against (%)" (Source 2)
 
 4.) To continue cleaning the Dartmouth EWP data, define the five officially recognized Caucasus countries by respective ISO3 country codes, listed below ("country [ISO3 code]"):
 
@@ -317,7 +317,7 @@ Procedure for Step 2: Data Cleaning is below:
 
 
 
-**STEP D: Standardize columns across DEWP CSV file and raw WB JSON file to merge the files in preparation for analysis in 'run_analysis.py'.**
+**STEP D: Standardize columns across DEWP CSV file and raw WB JSON file to merge the files in preparation for analysis in 'run_analysis.py'**
 
 11.) Convert raw WB JSON data from long to wide format 
 
@@ -383,27 +383,27 @@ This data analysis step is performed to properly set up a bar chart comparing th
 
 **Combined DEWP Risk Factors and WB Indicators**
 
-Below are the outputs of the DEWP risk factors and WB indicators after running descriptive statistics on each.
+Below are the output variables of the DEWP risk factors and WB indicators after running descriptive statistics on each variable.
 
-- risk_in_2024_mean
+- "risk_in_2024_mean"
 
-- freediscussion_mean
+- "freediscussion_mean"
 
-- efindex_mean
+- "efindex_mean"
 
-- religiousfreedom_mean
+- "religiousfreedom_mean"
 
-- discrimpop_mean
+- "discrimpop_mean"
 
-- GDP growth (annual %)_mean → WB 'GDP Growth' indicator
+- "GDP growth (annual %)_mean" → WB "GDP Growth" indicator
 
-- GDP per capita (constant 2015 US$)_mean → WB 'GDP per capita (constant 2015 US$)' indicator
+- "GDP per capita (constant 2015 US$)_mean" → WB "GDP per capita (constant 2015 US$)" indicator
 
-- Population growth (annual %)_mean → WB 'Population growth (annual %)' indicator
+- "Population growth (annual %)_mean" → WB "Population growth (annual %)" indicator
 
-- Population, total_mean → WB 'Population, total' indicator
+- "Population, total_mean" → WB "Population, total" indicator
 
-- Urban population (% of total population)_mean → WB 'Urban Population (%)' indicator 
+- "Urban population (% of total population)_mean" → WB "Urban Population (%)" indicator 
 
 5.) Save these descriptive statistics for these risk factors and indicators as a CSV file
 
@@ -416,11 +416,11 @@ Below are the outputs of the DEWP risk factors and WB indicators after running d
 
 This data analysis step is performed to properly set up a scatterplot showing the correlation between GDP and risk for each country (as shown in Step 4 of this project, "Data Visualization," in 'visualize results.py').
 
-6.) Generate a Pearson correlation between a Caucasus country's risk score and its current GDP per capita. This involves selecting the relevant columns, listed below:
+6.) Generate a Pearson correlation between a Caucasus country's Risk Score and its current GDP per capita. This involves selecting the relevant columns, listed below:
 
-- Country
-- risk_in_2024_mean (generated from Step C above)
-- GDP per capita (constant 2015 US$)_mean
+- "Country"
+- "risk_in_2024_mean" (generated from Step C above)
+- "GDP per capita (constant 2015 US$)_mean"
 
 7.) Save these correlations to a CSV file
 
@@ -431,30 +431,30 @@ This data analysis step is performed to properly set up a scatterplot showing th
 
 This data analysis step is performed to properly set up a horizontal bar chart showing which WB Indicators are most strongly correlated with a country's risk of experiencing ongoing mass killing in 2024-2025 (as shown in Step 4 of this project, "Data Visualization," in 'visualize results.py').
 
-8.) Generate a Pearson correlation between 'risk_in_2024_mean' and all other DEWP risk factors and WB Indicators. This involves selecting the averages ("..._mean" variables)of all DEWP risk factors and WB indicators, listed below:
+8.) Generate a Pearson correlation between "risk_in_2024_mean" and all other DEWP risk factors and WB Indicators. This involves selecting the averages ("..._mean" variables)of all DEWP risk factors and WB indicators, listed below:
 
-- risk_in_2024_mean → Average of "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
+- "risk_in_2024_mean" → Average of "country's Estimated Risk for "onset of intrastate mass killing in 2024-25"
 
-- freediscussion_mean → Average of "Citizens' ability to openly discuss political issues"
+- "freediscussion_mean" → Average of "Citizens ability to openly discuss political issues"
 
-- efindex_mean → Average of variable representing percentage of "Ethnic Heterogeneity"
+- "efindex_mean" → Average of variable representing percentage of "Ethnic Heterogeneity"
 
-- religiousfreedom_mean → Average of variable showing whether or not there is "Freedom of Religion"
+- "religiousfreedom_mean" → Average of variable showing whether or not there is "Freedom of Religion"
 
-- discrimpop_mean → Average variable representing "Portion of Population Coded as Being Discriminated Against (%)"
+- "discrimpop_mean" → Average variable representing "Portion of Population Coded as Being Discriminated Against (%)"
 
-- GDP growth (annual %)_mean → Average of WB 'GDP Growth' indicator
+- "GDP growth (annual %)_mean" → Average of WB "GDP Growth" indicator
 
-- GDP per capita (constant 2015 US$)_mean → Average of WB 'GDP per capita (constant 2015 US$)' indicator
+- "GDP per capita (constant 2015 US$)_mean" → Average of WB "GDP per capita (constant 2015 US$)" indicator
 
-- Population growth (annual %)_mean → Average of 'Population growth (annual %)'
+- "Population growth (annual %)_mean" → Average of "Population growth (annual %)"
 
-- Population, total_mean → Average of 'Population, total' indicator
+- "Population, total_mean" → Average of "Population, total" indicator
 
-- Urban population (% of total population)_mean → Average of 'Urban Population (%)' indicator
+- "Urban population (% of total population)_mean" → Average of "Urban Population (%)" indicator
 
 
-This procedure generates correlations across the Caucasus region, showing how strongly, positively, weakly, or negatively each DEWP risk factor and WB indicator is associated with a country's risk for experiencing ongoing mass killing for 2024-2025. Generating these descriptive statistics, per-country averages, and Pearson correlations across the DEWP risk factors and WB indicators is necessary for completing Step 4 of this project (Data Visualization, "visualize_results.py") to visualize the risk of ongoing mass killing in the Caucasus countries for 2024 - 2025.
+This procedure generates correlations across the Caucasus region, showing how strongly, positively, weakly, or negatively each DEWP risk factor and WB indicator is associated with a country's risk of experiencing ongoing mass killing for 2024-2025. Generating these descriptive statistics, per-country averages, and Pearson correlations across the DEWP risk factors and WB indicators is necessary for completing Step 4 of this project (Data Visualization, "visualize_results.py"), which visualizes the risk of ongoing mass killing in the Caucasus countries for 2024-2025.
 
 The precise processes utilized for data analysis in this project are detailed in the "run_analysis.py" file, which is required for Step 4: Data Visualization.
 
@@ -470,46 +470,46 @@ Steps for the Data Visualizations Procedure are below:
 
 1.) Import pandas and matplotlib libraries (as described above)
 
-2.) Generate three visualizations for each descriptive statistic calculated above
+2.) Generate three visualizations for each descriptive statistic calculated above in Step 3: Data Analysis (as shown in "run_analysis.py")
 
 **STEP B: Generate Bar Chart - 2024 Risk Scores by Country**
 
-This bar chart compares the average risk of a given country experiencing ongoing mass killing in 2024-2025 (Risk Score)
+This bar chart compares the average risk score of a given Caucasus country to experience ongoing mass killing in 2024 - 2025.
 
 3.) To generate the bar chart, begin by selecting the "Country" as the label and the "risk_in_2024_mean" to serve as the bar height.
 
-4.) Sort the visualization of countries from highest risk to lowest risk
+4.) Sort the visualization of countries from highest risk to lowest risk score
 
-5.) Generate the bar chart, specifying x-axis ("Country"), y-axis ("risk_in_2024_mean"), and title, "2024 Average Risk by Caucasus Country." 
+5.) Generate the bar chart, specifying x-axis ("Country"), y-axis ("risk_in_2024_mean"), and title, "Average Risk by Caucasus Country (2024)" 
 
-6.) Save bar chart as a .png file as "Bar_Risk_by_Country"
+6.) Save bar chart as a ".png" file as "Bar_Risk_by_Country.png"
 
 **STEP C: Generate Scatterplot -  GDP Per Capita vs. Risk Score**
 
-This scatterplot shows the association between a given country's Gross Domestic Product (GDP) per Capita and its respective Risk Score
+This scatterplot shows the association between a given Caucasus country's Gross Domestic Product (GDP) per Capita and its respective risk score
 
 7.) To generate the scatterplot, begin by creating a dataframe with one row per country, one economic indicator, and one risk outcome per country 
 
-8.) Generate the scatterplot, specifying x-axis data position as "GDP per capita (constant 2015 US$)_mean" and specifying the y-axis data position as "risk_in_2024_mean", and title, "2024 Average Risk by Caucasus Country"
+8.) Generate the scatterplot, specifying x-axis data position as "GDP per capita (constant 2015 US$)_mean" and specifying the y-axis data position as "risk_in_2024_mean", and title, "GDP per capita vs. Average Risk score (2024)"
 
-6.) Save scatterplot as a .png file as "Scatter_Risk_GDP"
+6.) Save scatterplot as a ".png" file as "Scatter_Risk_GDP.png"
 
 **STEP D: Generate Horizontal Bar Chart - WB Indicators vs. Risk Score**
 
-This Horizontal Bar Chart shows which DEWP risk factors and WB Indicators are most or least correlated with a country's risk of experiencing ongoing mass killing in 2024-2025.
+This Horizontal Bar Chart shows which DEWP risk factors and WB Indicators are most strongly, weakly, positively, or negatively correlated with a Caucasus country's risk of experiencing ongoing mass killing in 2024 - 2025.
 
 7.) To generate the horizontal bar chart, begin by sorting the visualization from negative to positive risk correlations.
 
-8.) Generate the  horizontal bar chart, specify the x-axis as "Risk Score Correlation", specify the y-axis as "Average Risk Score", and specify the title as "Risk Factors, Indicators vs. Risk Score."
+8.) Generate the  horizontal bar chart, specify the x-axis as "Risk Score Correlation", specify the y-axis as "Average Risk Score", and specify the title as "Correlation Between DEWP Risk Factors, WB Indicators vs. Risk Score."
 
-6.) Save scatterplot as a .png file as "Horizontal_Bar_Indicator_Risk"
+6.) Save scatterplot as a ".png" file as "Horizontal_Bar_Indicator_Risk.png"
 
 The precise processes utilized for data visualization in this project are detailed in the "visualize_results.py" file.
 
 
 
 
-Consulted Suoprce:
+Consulted Sources:
 
 1.) https://earlywarningproject.ushmm.org/reports/countries-at-risk-for-intrastate-mass-killing-2024-25-early-warning-project-statistical-risk-assessment-results
 2.) https://earlywarningproject.ushmm.org/reports-and-downloads (WorldwideData_sra_2025.csv)
