@@ -181,6 +181,8 @@ Loads, cleans, filters, and saves processed WB API data in raw JSON format, refl
 
 - Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
 
+
+
 4.) Loop through each country via "for loop", appending the above indicators and their corresponding values for the current country into a specified list of dictionaries.
 
 5.) Convert the list of nested dictionaries, containing the following components for each country:
@@ -259,15 +261,15 @@ Steps for the Data Analysis Procedure are below:
 
 - discrimpop
 
-- GDP growth (annual %) --> select WB 'GDP Growth' indicator
+- GDP growth (annual %) → WB 'GDP Growth' indicator
 
-- GDP per capita (constant 2015 US$) --> select WB 'GDP per capita (constant 2015 US$)' indicator
+- GDP per capita (constant 2015 US$) → WB 'GDP per capita (constant 2015 US$)' indicator
 
-- Population growth (annual %) --> select WB 'Population growth (annual %)' indicator
+- Population growth (annual %) → WB 'Population growth (annual %)' indicator
 
-- Population, total --> select WB 'Population, total' indicator
+- Population, total → WB 'Population, total' indicator
 
-- Urban population (% of total population) --> select WB 'Urban Population (%)' indicator 
+- Urban population (% of total population) → WB 'Urban Population (%)' indicator 
 
 
 3.) Save these descriptive statistics for these risk factors and indicators, as a CSV file
