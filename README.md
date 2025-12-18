@@ -1,4 +1,5 @@
 **DSCI510FinalProject**
+
 This GitHub Repository (and/or zip file) contains the files necessary for completion of the DSCI510 final project for the Fall 2025 semester, taught by Professor Itay Hen.
 
 The team member for this project is Maria Popovic. Email, GitHub username, and USC ID are below.
