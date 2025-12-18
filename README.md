@@ -429,7 +429,7 @@ Steps for the Data Visualizations Procedure are below:
 
 2.) Generate three visualizations for each descriptive statistic calculated above
 
-**STEP B: Generate Bar Chart - 2024 RISK SCORES BY COUNTRY**
+**STEP B: Generate Bar Chart - 2024 Risk Scores by Country**
 
 This bar chart compares the average risk of a given country experiencing ongoing mass killing in 2024-2025 (Risk Score)
 
@@ -441,7 +441,7 @@ This bar chart compares the average risk of a given country experiencing ongoing
 
 6.) Save bar chart as a .png file as "Bar_Risk_by_Country"
 
-**STEP C: Generate Scatterplot -  GDP PER CAPITA vs. RISK SCORE**
+**STEP C: Generate Scatterplot -  GDP Per Capita vs. Risk Score**
 
 This scatterplot shows the association between a given country's Gross Domestic Product (GDP) per Capita and its respective Risk Score
 
@@ -451,7 +451,7 @@ This scatterplot shows the association between a given country's Gross Domestic 
 
 6.) Save scatterplot as a .png file as "Scatter_Risk_GDP"
 
-**STEP D: Generate Horizontal Bar Chart - WB INDICATORS VS RISK SCORE**
+**STEP D: Generate Horizontal Bar Chart - WB Indicators vs. Risk Score**
 
 This Horizontal Bar Chart shows which DEWP risk factors and WB Indicators are most or least correlated with a country's risk of experiencing ongoing mass killing in 2024-2025.
 
