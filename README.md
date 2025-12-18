@@ -36,6 +36,8 @@ Below, I outline the necessary components for completing this project.
 - Utilized in 'visualize_results.py.'
 
 
+
+
 **Code Running Procedure**
 
 In the terminal, navigate to the directory where the project folder is located. This can be done by utilizing the 'cd' terminal command, which stands for 'change directory'.
@@ -45,7 +47,6 @@ For example, to navigate to the directory where this project is located, one cou
 
 **For each required code block of this project, one would navigate to the following directories in the terminal**
 
-
 **1.) To retrieve and run 'get_data.py', navigate to the following directory using the path below:**
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/data/raw"
@@ -54,7 +55,6 @@ To run the 'get_data.py' file, type the following in the terminal ("python", fol
 
 "python get_data.py"
 
-
 **2.) To retrieve and run 'clean_data.py', navigate to the following directory using the path below:**
 
 "cd /Users/mariakalaitzidis/Documents/USC/Fall2025Courses/DSCI510/FinalProject/MP_FinalProject/data/processed"
@@ -62,7 +62,6 @@ To run the 'get_data.py' file, type the following in the terminal ("python", fol
 To run the 'clean_data.py' file, type the following in the terminal ("python", followed by the file you wish to run):
 
 "python clean_data.py"
-
 
 **3.) To retrieve and run 'run_analysis.py', navigate to the following directory using the path below:**
 
@@ -79,6 +78,8 @@ To run the 'run_analysis.py' file, type the following in the terminal ("python",
 To run the 'visualize_results.py' file, type the following in the terminal ("python", followed by the file you wish to run):
 
 "python visualize_results.py"
+
+
 
 
 **Data Collection Description**
@@ -100,19 +101,24 @@ For this project, the above was done for the following indicators ("Indicator na
 - Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
 
 
+
+
 **Data Collection Procedure**
 
 Steps for the Data Collection Procedure are below:
 
+
 **STEP A: Import Libraries**
 
 1.) Import pandas, requests, and json libraries (as described above)
+
 
 **STEP B: Load and save DEWP global risk scores**
 
 2.) 'WorldwideData_sra_2025.csv', showing global risks of countries experiencing ongoing mass killing.
 
 3.) Save raw file in original CSV, "RAW_Caucasus_RiskData_2025.csv"
+
 
 **STEP C: Load and save WB API data**
 
@@ -128,25 +134,27 @@ Steps for the Data Collection Procedure are below:
 
 - Russia (RUS)
 
+
 4.) Define WB indicators of interest in a dictionary (Indicator names (key) and WB indicator codes (value)), listed below ("Indicator name → Indicator Code")
 
-- GDP per capita, PPP (constant 2021 international $) → NY.GDP.PCAP.KD", # generate key-value pair for 'GDP per capita' indicator (Source 9)
+- GDP per capita, PPP (constant 2021 international $) → NY.GDP.PCAP.KD
 
-- GDP Growth (annual %) → NY.GDP.MKTP.KD.ZG , # generate key-value pair for 'GDP Growth (annual %)' indicator (Source 10)
+- GDP Growth (annual %) → NY.GDP.MKTP.KD.ZG
 
-- Total Population → SP.POP.TOTL # generate key-value pair for 'Total Population' indicator (Source 11)
+- Total Population → SP.POP.TOTL
 
-- Urban population (% of total population) → SP.URB.TOTL.IN.ZS # generate key-value pair for 'Urban population (% of total population)' indicator (Source 12)
+- Urban population (% of total population) → SP.URB.TOTL.IN.ZS
 
-- Population Growth (annual %) → SP.POP.GROW # generate key-value pair for 'Population Growth (annual %)' indicator (Source 13)
+- Population Growth (annual %) → SP.POP.GROW
 
-- Government Effectiveness (Estimate) → GE.EST  # generate key-value pair for 'Government Effectiveness (Estimate)' indicator (Source 14)
+- Government Effectiveness (Estimate) → GE.EST
 
-- Rule of Law → RL.EST # generate key-value pair for 'Rule of Law' indicator (Source 15)
+- Rule of Law → RL.EST
 
-- Secondary School Enrollment (% gross) → SE.SEC.ENRR # generate key-value pair for 'Secondary School Enrollment (% gross)' indicator (Source 16)
+- Secondary School Enrollment (% gross) → SE.SEC.ENRR
 
-- Human Capital Index (HCI) (scale 0-1) → HD.HCI.OVRL #  # generate key-value pair for 'Human Capital Index (HCI) (scale 0-1)' indicator (Source 17)
+- Human Capital Index (HCI) (scale 0-1) → HD.HCI.OVRL
+
 
 As noted in the final report, the following indicators were selected for the remainder of the project.
 
@@ -160,13 +168,17 @@ As noted in the final report, the following indicators were selected for the rem
 
 - Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
 
-5.) Run nested loop over above indicator names and indicator codes
+
+5.) Run a nested loop over the above indicator names and indicator codes
 
 6.) Parse WB API response into JSON format, convert into Python object
 
 7.) Save WB API indicator data as a raw JSON file
 
+
 The exact processes utilized for data collection necessary for this project are detailed in the section headers of each file
+
+
 
 
 **Data Cleaning Procedure**
@@ -176,6 +188,9 @@ Steps for the Data Cleaning Procedure are below:
 **STEP A: Import Libraries**
 
 1.) Import pandas and json libraries (as described above)
+
+
+
 
 **STEP B: Load, clean, filter, and save processed DEWP data to reflect
 Caucasus countries' risk data for experiencing ongoing mass killing.**
@@ -198,7 +213,7 @@ Caucasus countries' risk data for experiencing ongoing mass killing.**
 
 - efindex → select DEWP variable representing percentage of "Ethnic Heterogeneity."
 
-- discrimpop → select DEWP variable representing "Portion of Population Coded as Being Discriminated Against (%)"
+- discrimpop → select DEWP variable representing "Portion of Population Coded as Being Discriminated Against (%)."
 
 4.) To continue cleaning the Dartmouth EWP data, define the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country [ISO3 code]"):
 
@@ -212,8 +227,10 @@ Caucasus countries' risk data for experiencing ongoing mass killing.**
 
 - Russia (RUS)
 
-
 5.) Create and save a separate, filtered dataframe containing only the aforementioned risk factors of interest and the aforementioned countries. This step properly narrows the scope of  analysis required for Step 3 of this project (Data Analysis, "run_analysis.py"), which will analyze these data to reflect the risk of ongoing mass killing in the Caucasus countries.
+
+
+
 
 **STEP C: Load, clean, filter, and save processed WB API data in raw JSON format
 to reflect desired indicator names and indicator codes.**
@@ -246,8 +263,6 @@ Loads, cleans, filters, and saves processed WB API data in raw JSON format, refl
 
 - Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
 
-
-
 9.) Loop through each country via "for loop", appending the above indicators and their corresponding values for the current country into a specified list of dictionaries.
 
 10.) Convert the list of nested dictionaries, containing the following components for each country:
@@ -257,6 +272,8 @@ Loads, cleans, filters, and saves processed WB API data in raw JSON format, refl
 - Indicator Code
 - Year
 - Indicator Value
+
+
 
 
 **STEP D: Standardize columns across DEWP CSV file and raw WB JSON file to
@@ -273,9 +290,6 @@ The exact processes utilized for cleaning the data necessary for this project ar
 
 
 
-
-
-
 **Data Analysis Procedure**
 
 Steps for the Data Analysis Procedure are below:
@@ -284,11 +298,14 @@ Steps for the Data Analysis Procedure are below:
 
 1.) Import numpy and pandas libraries (as described above)
 
+
+
+
 **STEP B: Load merged Dartmouth EWP (DEWP) and World Bank API file**
 
 2.) Load the "merged_wb_dartmouth_df" file obtained in Step 2 of this project (Data Cleaning, "clean_data.py")
 
-3.) Begin cleaning "merged_wb_dartmouth_df" by defining the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code)")
+3.) Begin cleaning "merged_wb_dartmouth_df" by defining the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country [ISO3 code]")
 
 - Armenia (ARM)
 
@@ -301,9 +318,11 @@ Steps for the Data Analysis Procedure are below:
 - Russia (RUS)
 
 
+
+
 **STEP C: Generate Descriptive Statistics on DEWP Risk Factors and WB Indicators Per Caucasus Country.**
 
-4.) Perform the following descriptive statistics (below) on "merged_wb_dartmouth_df", for each of the quantitative DEWP risk factors and WB indicators (under "Combined DEWP Risk Factors and WB Indicators"):
+4.) Perform the following descriptive statistics on "merged_wb_dartmouth_df" (below), for each of the quantitative DEWP risk factors and WB indicators (under "Combined DEWP Risk Factors and WB Indicators"):
 
 **Descriptive Statistics**
 
@@ -318,7 +337,10 @@ This data analysis step is performed to properly set up a bar chart comparing th
 - Maximum
 - Minimum
 
-**Combined DEWP Risk Factors and WB Indicators (output)**
+
+**Combined DEWP Risk Factors and WB Indicators**
+
+Below are the outputs of the DEWP risk factors and WB indicators after running descriptive statistics on each.
 
 - risk_in_2024_mean
 
@@ -340,7 +362,9 @@ This data analysis step is performed to properly set up a bar chart comparing th
 
 - Urban population (% of total population)_mean → WB 'Urban Population (%)' indicator 
 
-5.) Save these descriptive statistics for these risk factors and indicators, as a CSV file
+5.) Save these descriptive statistics for these risk factors and indicators as a CSV file
+
+
 
 
 **STEP D: Generate averages per Caucasus country for the WB Indicator of Gross Domestic Product (GDP) and its respective DEWP Risk Score.**
@@ -356,6 +380,9 @@ This data analysis step is performed to properly set up a scatterplot showing th
 - GDP per capita (constant 2015 US$)_mean
 
 7.) Save these correlations to a CSV file
+
+
+
 
 **Correlations Procedure**
 
@@ -393,7 +420,6 @@ Detailed data analysis for this project is documented via comments in the 'run_a
 
 ****Data Visualizations Procedure****
 
-
 Steps for the Data Visualizations Procedure are below:
 
 **STEP A: Import pandas and matplotlib libraries**
@@ -403,6 +429,7 @@ Steps for the Data Visualizations Procedure are below:
 2.) Generate three visualizations for each descriptive statistic calculated above
 
 **STEP B: Generate Bar Chart - 2024 RISK SCORES BY COUNTRY**
+
 This bar chart compares the average risk of a given country experiencing ongoing mass killing in 2024-2025 (Risk Score)
 
 3.) To generate the bar chart, begin by selecting the "Country" as the label and the "risk_in_2024_mean" to serve as the bar height.
@@ -414,6 +441,7 @@ This bar chart compares the average risk of a given country experiencing ongoing
 6.) Save bar chart as a .png file as "Bar_Risk_by_Country"
 
 **STEP C: Generate Scatterplot -  GDP PER CAPITA vs. RISK SCORE**
+
 This scatterplot shows the association between a given country's Gross Domestic Product (GDP) per Capita and its respective Risk Score
 
 7.) To generate the scatterplot, begin by creating a dataframe with one row per country, one economic indicator, and one risk outcome per country 
@@ -423,6 +451,7 @@ This scatterplot shows the association between a given country's Gross Domestic 
 6.) Save scatterplot as a .png file as "Scatter_Risk_GDP"
 
 **STEP D: Generate Horizontal Bar Chart - WB INDICATORS VS RISK SCORE**
+
 This Horizontal Bar Chart shows which DEWP risk factors and WB Indicators are most or least correlated with a country's risk of experiencing ongoing mass killing in 2024-2025.
 
 7.) To generate the horizontal bar chart, begin by sorting the visualization from negative to positive risk correlations.
@@ -431,29 +460,4 @@ This Horizontal Bar Chart shows which DEWP risk factors and WB Indicators are mo
 
 6.) Save scatterplot as a .png file as "Horizontal_Bar_Indicator_Risk"
 
-Detailed data visualization for this project is documented via comments in the 'visualization_results.py' file.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Detailed data visualization for this project is documented via comments in the 'visualization_results.py' file
