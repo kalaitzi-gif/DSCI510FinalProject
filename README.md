@@ -41,8 +41,11 @@ The steps required to create the virtual environment for this project are the fo
 The output of these commands will be standard components necessary for setting up a Python virtual environment (shown below):
 
 1.) bin
+
 2.) include
+
 3.) lib
+
 4.) pyvenv.cfg
 
 
@@ -217,7 +220,7 @@ As noted in the final report, the following indicators were selected for the pro
 This step properly prepares data cleaning required for Step 2 of this project (Data Cleaning, "clean_data.py"), which will clean the data and prepare it for Step 3 of this project (Data Analysis, "run_analysis.py").
 
 
-The precise processes used for data collection in this project are detailed in the "get_data.py" file, which is required for Step 2: Data Cleaning.
+The precise processes utilized for data collection in this project are detailed in the "get_data.py" file, which is required for Step 2: Data Cleaning.
 
 
 
@@ -324,7 +327,7 @@ Procedure for Step 2: Data Cleaning is below:
 
 This step properly prepares the DEWP and WB data for Step 3 of this project (Data Analysis, "run_analysis.py"), which will analyze these data to reflect the risk of ongoing mass killing in the Caucasus countries for 2024 - 2025.
 
-The precise processes used for data cleaning in this project are detailed in the "clean_data.py" file, which is required for Step 3: Data Analysis.
+The precise processes utilized for data cleaning in this project are detailed in the "clean_data.py" file, which is required for Step 3: Data Analysis.
 
 
 
@@ -404,7 +407,6 @@ Below are the outputs of the DEWP risk factors and WB indicators after running d
 
 5.) Save these descriptive statistics for these risk factors and indicators as a CSV file
 
-The precise processes used for data analysis in this project are detailed in the "run_analysis.py" file, which is required for Step 4: Data Visualization.
 
 
 
@@ -422,7 +424,6 @@ This data analysis step is performed to properly set up a scatterplot showing th
 
 7.) Save these correlations to a CSV file
 
-The precise processes used for data analysis in this project are detailed in the "run_analysis.py" file, which is required for Step 4: Data Visualization.
 
 
 
@@ -455,7 +456,7 @@ This data analysis step is performed to properly set up a horizontal bar chart s
 
 This procedure generates correlations across the Caucasus region, showing how strongly, positively, weakly, or negatively each DEWP risk factor and WB indicator is associated with a country's risk for experiencing ongoing mass killing for 2024-2025. Generating these descriptive statistics, per-country averages, and Pearson correlations across the DEWP risk factors and WB indicators is necessary for completing Step 4 of this project (Data Visualization, "visualize_results.py") to visualize the risk of ongoing mass killing in the Caucasus countries for 2024 - 2025.
 
-The precise processes used for data analysis in this project are detailed in the "run_analysis.py" file, which is required for Step 4: Data Visualization.
+The precise processes utilized for data analysis in this project are detailed in the "run_analysis.py" file, which is required for Step 4: Data Visualization.
 
 
 
@@ -503,8 +504,7 @@ This Horizontal Bar Chart shows which DEWP risk factors and WB Indicators are mo
 
 6.) Save scatterplot as a .png file as "Horizontal_Bar_Indicator_Risk"
 
-The precise processes used for data visualization in this project are detailed in the "run_analysis.py" file, which is required for Step 3: Data Analysis.
-The precise processes used for data visualization in this project are detailed in the "run_analysis.py" file, which is required for Step 3: Data Analysis.
+The precise processes utilized for data visualization in this project are detailed in the "visualize_results.py" file.
 
 
 
@@ -522,4 +522,4 @@ Consulted Suoprce:
 9.) https://data.worldbank.org/indicator/GE.EST
 10.) https://data.worldbank.org/indicator/RL.EST
 11.) https://data.worldbank.org/indicator/SE.SEC.ENRR
-12.) HD.HCI.OVRL
+12.) https://data.worldbank.org/indicator/HD.HCI.OVRL
