@@ -16,7 +16,7 @@ Below, I outline the necessary components for completing this project.
 **The requirements for this project are the following libraries (via terminal):**
 
 **1.) Import pandas library (to load, filter, and save dataset)**
-- Loaded library via rendering statement in terminal 'import pandas' (as pd)
+- Loaded library via rendering statement in terminal "import pandas" (as pd)
 - Utilized in 'get_data.py', 'clean_data.py', 'run_analysis.py', 'visualize_results.py.'
 
 **2.) Import requests module to retrieve webpage**
@@ -81,9 +81,7 @@ To run the 'visualize_results.py' file, type the following in the terminal ("pyt
 "python visualize_results.py"
 
 
-
-
-**Data Collection Procedure --> STANDARDIZE STEPS TO MATCH THE REST OF THE PAHSES**
+**Data Collection Description**
 
 To obtain the Dartmouth Early Warning Project Risk Forecasting data necessary for this project, navigate to the Dartmouth Early Warning Project (DEWP) "Reports & Downloads" webpage: https://earlywarningproject.ushmm.org/reports-and-downloads. Next, under "Downloads", locate the banner entitled "All 2025-26 Data (CSV)". Under that banner, click "All worldwide data," and a CSV file of global risk forecasts will be automatically downloaded.
 
@@ -100,6 +98,75 @@ For this project, the above was done for the following indicators ("Indicator na
 - Population, total → (SP.POP.TOTL)
 
 - Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
+
+
+**Data Collection Procedure
+
+Steps for the Data Collection Procedure are below:
+
+The steps involved in this file are the following:
+
+**STEP A: Import Libraries**
+
+1.) Import pandas, requests, and json libraries (as described above)
+
+**STEP B: Load and save DEWP global risk scores**
+
+2.) 'WorldwideData_sra_2025.csv', showing global risks of countries experiencing ongoing mass killing.
+
+3.) Save raw file in original CSV, "RAW_Caucasus_RiskData_2025.csv"
+
+**STEP C: Load and save WB API data**
+
+3.) Define the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code)"):
+
+- Armenia (ARM)
+
+- Azerbaijan (AZE)
+
+- Georgia (GEO)
+
+- Iran (IRN)
+
+- Russia (RUS)
+
+4.) Define WB indicators of interest in a dictionary (Indicator names (key) and WB indicator codes (value)), listed below ("Indicator name → Indicator Code")
+
+- GDP per capita, PPP (constant 2021 international $) → NY.GDP.PCAP.KD", # generate key-value pair for 'GDP per capita' indicator (Source 9)
+
+- GDP Growth (annual %) → NY.GDP.MKTP.KD.ZG , # generate key-value pair for 'GDP Growth (annual %)' indicator (Source 10)
+
+- Total Population → SP.POP.TOTL # generate key-value pair for 'Total Population' indicator (Source 11)
+
+- Urban population (% of total population) → SP.URB.TOTL.IN.ZS # generate key-value pair for 'Urban population (% of total population)' indicator (Source 12)
+
+- Population Growth (annual %) → SP.POP.GROW # generate key-value pair for 'Population Growth (annual %)' indicator (Source 13)
+
+- Government Effectiveness (Estimate) → GE.EST  # generate key-value pair for 'Government Effectiveness (Estimate)' indicator (Source 14)
+
+- Rule of Law → RL.EST # generate key-value pair for 'Rule of Law' indicator (Source 15)
+
+- Secondary School Enrollment (% gross) → SE.SEC.ENRR # generate key-value pair for 'Secondary School Enrollment (% gross)' indicator (Source 16)
+
+- Human Capital Index (HCI) (scale 0-1) → HD.HCI.OVRL #  # generate key-value pair for 'Human Capital Index (HCI) (scale 0-1)' indicator (Source 17)
+
+As noted in the final report, the following indicators were selected for the remainder of the project.
+
+- GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG)
+
+- GDP per capita (constant 2015 US$) → (NY.GDP.PCAP.KD)
+
+- Population growth (annual %) → (SP.POP.GROW)
+
+- Population, total → (SP.POP.TOTL)
+
+- Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
+
+5.) Run nested loop over above indicator names and indicator codes
+
+6.) Parse WB API response into JSON format, convert into Python object
+
+7.) Save WB API indicator data as a raw JSON file
 
 The exact processes utilized for data collection necessary for this project are detailed in the section headers of each file
 
