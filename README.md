@@ -155,9 +155,9 @@ to reflect desired indicator names and indicator codes.**
 
 Loads, cleans, filters, and saves processed WB API data in raw JSON format, reflecting the desired indicator names and indicator codes.
 
-1.) Load the "RAW_WB_Caucasus_2025.json" file (obtained in Step 1, Data Collection, in the "get_data.py" file)
+6.) Load the "RAW_WB_Caucasus_2025.json" file (obtained in Step 1, Data Collection, in the "get_data.py" file)
 
-2.) Clean "RAW_WB_Caucasus_2025.json" file by the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code):
+7.) Clean "RAW_WB_Caucasus_2025.json" file by the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code):
 
 - Armenia (ARM)
 
@@ -169,7 +169,7 @@ Loads, cleans, filters, and saves processed WB API data in raw JSON format, refl
 
 - Russia (RUS)
 
-3.) Filter WB indicators of interest, which include the following ("Indicator Name - Indicator Code"):
+8.) Filter WB indicators of interest, which include the following ("Indicator Name - Indicator Code"):
 
 - GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG)
 
@@ -183,9 +183,9 @@ Loads, cleans, filters, and saves processed WB API data in raw JSON format, refl
 
 
 
-4.) Loop through each country via "for loop", appending the above indicators and their corresponding values for the current country into a specified list of dictionaries.
+9.) Loop through each country via "for loop", appending the above indicators and their corresponding values for the current country into a specified list of dictionaries.
 
-5.) Convert the list of nested dictionaries, containing the following components for each country:
+10.) Convert the list of nested dictionaries, containing the following components for each country:
 
 - Country
 - Indicator Name
@@ -197,13 +197,14 @@ Loads, cleans, filters, and saves processed WB API data in raw JSON format, refl
 **STEP D: Standardize columns across DEWP CSV file and raw WB JSON file to
 merge the files in preparation for analysis in 'run_analysis.py'.**
 
-6.) Convert raw WB JSON data from long to wide format 
+11.) Convert raw WB JSON data from long to wide format 
 
-7.) Perform outer merge on processed 'filtered_dartmouth_df' file with processed 'wb_records_wide' file, based on the union of keys from both dataframes ('Country' and 'Year')
+12.) Perform outer merge on processed 'filtered_dartmouth_df' file with processed 'wb_records_wide' file, based on the union of keys from both dataframes ('Country' and 'Year')
 
-8.) Save merged file
+13.) Save merged file
 
 The exact processes utilized for cleaning the data necessary for this project are detailed in the section headers of each file
+
 
 
 
@@ -220,9 +221,9 @@ Steps for the Data Analysis Procedure are below:
 
 **STEP B: Load merged Dartmouth EWP (DEWP) and World Bank API file**
 
-1.) Load the "merged_wb_dartmouth_df" file obtained in Step 2 of this project (Data Cleaning, "clean_data.py")
+2.) Load the "merged_wb_dartmouth_df" file obtained in Step 2 of this project (Data Cleaning, "clean_data.py")
 
-2.) Begin cleaning "merged_wb_dartmouth_df" by defining the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code)")
+3.) Begin cleaning "merged_wb_dartmouth_df" by defining the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code)")
 
 - Armenia (ARM)
 
@@ -234,9 +235,10 @@ Steps for the Data Analysis Procedure are below:
 
 - Russia (RUS)
 
-****Descriptive Statistics Procedure****
 
-3.) Perform the following descriptive statistics (below) on "merged_wb_dartmouth_df", for each of the quantitative DEWP risk factors and WB indicators (under "Combined DEWP Risk Factors and WB Indicators" ):
+**STEP C: Generate Descriptive Statistics on DEWP Risk Factors and WB Indicators Per Caucasus Country.**
+
+4.) Perform the following descriptive statistics (below) on "merged_wb_dartmouth_df", for each of the quantitative DEWP risk factors and WB indicators (under "Combined DEWP Risk Factors and WB Indicators" ):
 
 **Descriptive Statistics**
 
@@ -249,57 +251,71 @@ Steps for the Data Analysis Procedure are below:
 - Maximum
 - Minimum
 
-**Combined DEWP Risk Factors and WB Indicators**
+**Combined DEWP Risk Factors and WB Indicators (output)**
 
-- risk_in_2024
+- risk_in_2024_mean
 
-- freediscussion
+- freediscussion_mean
 
-- efindex
+- efindex_mean
 
-- religiousfreedom
+- religiousfreedom_mean
 
-- discrimpop
+- discrimpop_mean
 
-- GDP growth (annual %) → WB 'GDP Growth' indicator
+- GDP growth (annual %)_mean → WB 'GDP Growth' indicator
 
-- GDP per capita (constant 2015 US$) → WB 'GDP per capita (constant 2015 US$)' indicator
+- GDP per capita (constant 2015 US$)_mean → WB 'GDP per capita (constant 2015 US$)' indicator
 
-- Population growth (annual %) → WB 'Population growth (annual %)' indicator
+- Population growth (annual %)_mean → WB 'Population growth (annual %)' indicator
 
-- Population, total → WB 'Population, total' indicator
+- Population, total_mean → WB 'Population, total' indicator
 
-- Urban population (% of total population) → WB 'Urban Population (%)' indicator 
+- Urban population (% of total population)_mean → WB 'Urban Population (%)' indicator 
+
+5.) Save these descriptive statistics for these risk factors and indicators, as a CSV file
 
 
-3.) Save these descriptive statistics for these risk factors and indicators, as a CSV file
+**STEP D: Generate averages per Caucasus country for the WB Indicator of Gross Domestic Product (GDP) and its respective DEWP Risk Score.**
 
 **Per-Country Averages Procedure**
 
-The third step involves generating a Pearson correlation between a given country's risk for experiencing ongoing mass killing and its current GDP per capita. This involves selecting the relevant columns, listed below:
+This data analysis step is performed to properly set up a scatterplot showing the correlation between GDP and risk for each country (as shown in Step 4 of this project, "Data Visualization," in 'visualize results.py').
 
-Country
-risk_in_2024_mean (generated from step c above)
-GDP per capita (constant 2015 US$)_mean
+6.) Generate a Pearson correlation between a Caucasus country's risk score and its current GDP per capita. This involves selecting the relevant columns, listed below:
 
-We save these correlations to a CSV file
+- Country
+- risk_in_2024_mean (generated from step c above)
+- GDP per capita (constant 2015 US$)_mean
+
+7.) Save these correlations to a CSV file
 
 **Correlations Procedure**
 
-The third step involves generating a Pearson correlation between 'risk_in_2024_mean' and all other DEWP risk factors and WB Indicators. This involves selecting the averages of all DEWP risk factors and WB indicators, listed below:
+8.) Generate a Pearson correlation between 'risk_in_2024_mean' and all other DEWP risk factors and WB Indicators. This involves selecting the averages ("..._mean" variables)of all DEWP risk factors and WB indicators, listed below:
 
-risk_in_2024_mean --> select average of "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'", (Source 8)
-freediscussion_mean --> select average of "Citizens' ability to openly discuss political issues" (Source 9)
-efindex_mean --> select average of variable representing percentage of "Ethnic Heterogeneity" (Source 9)
-religiousfreedom_mean --> select average of variable showing whether or not there is "Freedom of Religion" (Source 9)
-discrimpop_mean --> select variable representing "Portion of Population Coded as Being Discriminated Against (%)" (Source 9)
-GDP growth (annual %)_mean --> select average of WB 'GDP Growth' indicator (Source 28)
-GDP per capita (constant 2015 US$)_mean --> select average of WB 'GDP per capita (constant 2015 US$)' indicator (Source 10)
-Population growth (annual %)_mean --> select average of 'Population growth (annual %)' (Source 11)
-Population, total_mean --> select average of 'Population, total' indicator (Source 12)
-Urban population (% of total population)_mean --> select average of 'Urban Population (%)' indicator (Source 13)
+- risk_in_2024_mean --> average of "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
 
-This generates correlations across the Caucasus region, showing how each WB indicator is associated with a country's risk for experiencing ongoing mass killing
+- freediscussion_mean --> average of "Citizens' ability to openly discuss political issues"
+
+- efindex_mean --> average of variable representing percentage of "Ethnic Heterogeneity"
+
+- religiousfreedom_mean --> average of variable showing whether or not there is "Freedom of Religion"
+
+- discrimpop_mean --> variable representing "Portion of Population Coded as Being Discriminated Against (%)"
+
+- GDP growth (annual %)_mean --> average of WB 'GDP Growth' indicator
+
+- GDP per capita (constant 2015 US$)_mean --> average of WB 'GDP per capita (constant 2015 US$)' indicator
+
+- Population growth (annual %)_mean --> average of 'Population growth (annual %)'
+
+- Population, total_mean --> average of 'Population, total' indicator
+
+- Urban population (% of total population)_mean --> average of 'Urban Population (%)' indicator
+
+
+This procedure generates correlations across the Caucasus region, showing how strongly, positively, weakly, or negatively each DEWP risk factor and WB indicator is associated with a country's risk for experiencing ongoing mass killing. Generating these descriptive statistics, per-country averages, and Pearson correlations across the DEWP risk factors and AB indicators is necessary for completing Step 4 of this project (Data Visualization, "visualize_results.py").
 
 Detailed data analysis for this project is documented via comments in the 'run_analysis.py' file.
 
