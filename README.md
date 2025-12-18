@@ -10,7 +10,7 @@ The team member for this project is Maria Popovic. Email, GitHub username, and U
 
 **USC ID:** 2532568719
 
-Below, I outline the following components for completing this project.
+Below, I outline the required components for completing this project.
 
 **INSERT HEADER HERE**
 **INSERT HEADER HERE**
@@ -210,12 +210,14 @@ As noted in the final report, the following indicators were selected for the pro
 
 5.) Run a nested loop over the above indicator names and indicator codes
 
-6.) Parse WB API response into JSON format, convert into Python object
+6.) Parse WB API response into JSON format, deserialize (convert) into Python object
 
-7.) Save WB API indicator data as a raw JSON file
+7.) Save WB API indicator data as a raw JSON file.
+
+This step properly prepares data cleaning required for Step 2 of this project (Data Cleaning, "clean_data.py"), which will clean the data and prepare it for Step 3 of this project (Data Analysis, "run_analysis.py").
 
 
-The precise processes utilized for data collection necessary for this project are detailed in the "get_data.py" file required for Step 1: Data Collection
+The precise processes used for data collection in this project are detailed in the "get_data.py" file, which is required for Step 2: Data Cleaning.
 
 
 
@@ -232,17 +234,15 @@ Procedure for Step 2: Data Cleaning is below:
 1.) Import pandas and json libraries (as described above)
 
 
-**STEP B: Load, clean, filter, and save processed DEWP data to reflect Caucasus countries' risk data for experiencing ongoing mass killing.**
+**STEP B: Load, clean, filter, and save processed DEWP data to reflect Caucasus countries' risk data for experiencing ongoing mass killing for 2024 - 2025.**
 
-This step loads, cleans, filters, and saves the processed DEWP data to reflect Caucasus countries' risks of experiencing ongoing mass killing.**
-
-2.) Load the "WorldwideData_sra_2025.csv" file obtained in the "get_data.py" file 
+2.) Load the "WorldwideData_sra_2025.csv" file obtained in the "get_data.py" file
 
 3.) Clean "WorldwideData_sra_2025.csv" file via column filtration of the following risk factors from the CSV file:
 
 - ISO3 Country Code (ISO3166) (Source 3)
 
-- risk_in_2024: DEWP "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'" (Source 1)
+- risk_in_2024: DEWP "country's Estimated Risk for "onset of intrastate mass killing in 2024-25" (Source 1)
 
 - riskrank: Country ranking based on "estimated risk for onset of intrastate mass killing in 2024-25" (Source 2)
 
@@ -268,7 +268,7 @@ This step loads, cleans, filters, and saves the processed DEWP data to reflect C
 
 - Russia (RUS)
 
-5.) Create and save a separate, filtered dataframe containing only the aforementioned risk factors of interest and the aforementioned countries. This step properly narrows the scope of  analysis required for Step 3 of this project (Data Analysis, "run_analysis.py"), which will analyze these data to reflect the risk of ongoing mass killing in the Caucasus countries.
+5.) Create and save a separate, filtered dataframe containing only the aforementioned risk factors of interest and the aforementioned countries.
 
 
 
@@ -289,7 +289,7 @@ This step loads, cleans, filters, and saves the processed DEWP data to reflect C
 
 - Russia (RUS)
 
-8.) Filter WB indicators of interest, which include the following ("Indicator Name - Indicator Code"):
+8.) Filter WB indicators of interest, which include the following ("Indicator Name → Indicator Code"):
 
 - GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG)
 
@@ -314,16 +314,18 @@ This step loads, cleans, filters, and saves the processed DEWP data to reflect C
 
 
 
-**STEP D: Standardize columns across DEWP CSV file and raw WB JSON file to
-merge the files in preparation for analysis in 'run_analysis.py'.**
+**STEP D: Standardize columns across DEWP CSV file and raw WB JSON file to merge the files in preparation for analysis in 'run_analysis.py'.**
 
 11.) Convert raw WB JSON data from long to wide format 
 
-12.) Perform outer merge on processed 'filtered_dartmouth_df' file with processed 'wb_records_wide' file, based on the union of keys from both dataframes ('Country' and 'Year')
+12.) Perform outer merge on processed 'filtered_dartmouth_df' file with processed 'wb_records_wide' file, based on the union of keys from both dataframes ("Country" and "Year")
 
 13.) Save merged file
 
-The precise processes utilized for data cleaning necessary for this project are detailed in the "clean_data.py" file required for Step 2: Data Cleaning.
+This step properly prepares the DEWP and WB data for Step 3 of this project (Data Analysis, "run_analysis.py"), which will analyze these data to reflect the risk of ongoing mass killing in the Caucasus countries for 2024 - 2025.
+
+The precise processes used for data cleaning in this project are detailed in the "clean_data.py" file, which is required for Step 3: Data Analysis.
+
 
 
 
@@ -402,6 +404,7 @@ Below are the outputs of the DEWP risk factors and WB indicators after running d
 
 5.) Save these descriptive statistics for these risk factors and indicators as a CSV file
 
+The precise processes used for data analysis in this project are detailed in the "run_analysis.py" file, which is required for Step 4: Data Visualization.
 
 
 
@@ -419,6 +422,7 @@ This data analysis step is performed to properly set up a scatterplot showing th
 
 7.) Save these correlations to a CSV file
 
+The precise processes used for data analysis in this project are detailed in the "run_analysis.py" file, which is required for Step 4: Data Visualization.
 
 
 
@@ -449,9 +453,10 @@ This data analysis step is performed to properly set up a horizontal bar chart s
 - Urban population (% of total population)_mean → Average of 'Urban Population (%)' indicator
 
 
-This procedure generates correlations across the Caucasus region, showing how strongly, positively, weakly, or negatively each DEWP risk factor and WB indicator is associated with a country's risk for experiencing ongoing mass killing. Generating these descriptive statistics, per-country averages, and Pearson correlations across the DEWP risk factors and AB indicators is necessary for completing Step 4 of this project (Data Visualization, "visualize_results.py").
+This procedure generates correlations across the Caucasus region, showing how strongly, positively, weakly, or negatively each DEWP risk factor and WB indicator is associated with a country's risk for experiencing ongoing mass killing for 2024-2025. Generating these descriptive statistics, per-country averages, and Pearson correlations across the DEWP risk factors and WB indicators is necessary for completing Step 4 of this project (Data Visualization, "visualize_results.py") to visualize the risk of ongoing mass killing in the Caucasus countries for 2024 - 2025.
 
-The precise processes utilized for data analysis necessary for this project are detailed in the "run_analysis.py" file required for Step 3: Data Analysis.
+The precise processes used for data analysis in this project are detailed in the "run_analysis.py" file, which is required for Step 4: Data Visualization.
+
 
 
 
@@ -498,7 +503,9 @@ This Horizontal Bar Chart shows which DEWP risk factors and WB Indicators are mo
 
 6.) Save scatterplot as a .png file as "Horizontal_Bar_Indicator_Risk"
 
-Detailed data visualization for this project is documented via comments in the 'visualization_results.py' file
+The precise processes used for data visualization in this project are detailed in the "run_analysis.py" file, which is required for Step 3: Data Analysis.
+The precise processes used for data visualization in this project are detailed in the "run_analysis.py" file, which is required for Step 3: Data Analysis.
+
 
 
 
