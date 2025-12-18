@@ -116,7 +116,7 @@ Steps for the Data Collection Procedure are below:
 
 **STEP C: Load and save WB API data**
 
-3.) Define the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code)"):
+3.) Define the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country [ISO3 code]"):
 
 - Armenia (ARM)
 
@@ -200,7 +200,7 @@ Caucasus countries' risk data for experiencing ongoing mass killing.**
 
 - discrimpop → select DEWP variable representing "Portion of Population Coded as Being Discriminated Against (%)"
 
-4.) To continue cleaning the Dartmouth EWP data, define the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code)"):
+4.) To continue cleaning the Dartmouth EWP data, define the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country [ISO3 code]"):
 
 - Armenia (ARM)
 
@@ -222,7 +222,7 @@ Loads, cleans, filters, and saves processed WB API data in raw JSON format, refl
 
 6.) Load the "RAW_WB_Caucasus_2025.json" file (obtained in Step 1, Data Collection, in the "get_data.py" file)
 
-7.) Clean "RAW_WB_Caucasus_2025.json" file by the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country (ISO3 code):
+7.) Clean "RAW_WB_Caucasus_2025.json" file by the five officially recognized Caucasus countries by respective ISO3 country codes (ISO3166), listed below ("country [ISO3 code]"):
 
 - Armenia (ARM)
 
