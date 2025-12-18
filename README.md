@@ -10,7 +10,18 @@ The team member for this project is Maria Popovic. Email, GitHub username, and U
 
 **USC ID:** 2532568719
 
-Below, I outline the necessary components for completing this project.
+Below, I outline the following components for completing this project.
+
+**INSERT HEADER HERE**
+**INSERT HEADER HERE**
+**INSERT HEADER HERE**
+**INSERT HEADER HERE**
+**INSERT HEADER HERE**
+**INSERT HEADER HERE**
+**INSERT HEADER HERE**
+**INSERT HEADER HERE**
+**INSERT HEADER HERE**
+**INSERT HEADER HERE**
 
 
 
@@ -117,15 +128,15 @@ To obtain the World Bank API data necessary for this project (i.e., global indic
 
 For this project, the above was done for the following indicators ("Indicator name → Indicator Code"):
 
-- GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG)
+- GDP growth (annual %) → (NY.GDP.MKTP.KD.ZG) (Source 4)
 
-- GDP per capita (constant 2015 US$) → (NY.GDP.PCAP.KD)
+- GDP per capita (constant 2015 US$) → (NY.GDP.PCAP.KD) (Source 5)
 
-- Population growth (annual %) → (SP.POP.GROW)
+- Population growth (annual %) → (SP.POP.GROW) (Source 6)
 
-- Population, total → (SP.POP.TOTL)
+- Population, total → (SP.POP.TOTL) (Source 7)
 
-- Urban population (% of total population) → (SP.URB.TOTL.IN.ZS)
+- Urban population (% of total population) → (SP.URB.TOTL.IN.ZS) (Source 8)
 
 
 
@@ -175,13 +186,13 @@ Procedure for Step 1: Data Collection is below:
 
 - Population Growth (annual %) : SP.POP.GROW
 
-- Government Effectiveness (Estimate) : GE.EST
+- Government Effectiveness (Estimate) : GE.EST (Source 9)
 
-- Rule of Law : RL.EST
+- Rule of Law : RL.EST (Source 10)
 
-- Secondary School Enrollment (% gross) : SE.SEC.ENRR
+- Secondary School Enrollment (% gross) : SE.SEC.ENRR (Source 11)
 
-- Human Capital Index (HCI) (scale 0-1) : HD.HCI.OVRL
+- Human Capital Index (HCI) (scale 0-1) : HD.HCI.OVRL (Source 12)
 
 
 As noted in the final report, the following indicators were selected for the project.
@@ -221,8 +232,7 @@ Procedure for Step 2: Data Cleaning is below:
 1.) Import pandas and json libraries (as described above)
 
 
-**STEP B: Load, clean, filter, and save processed DEWP data to reflect
-Caucasus countries' risk data for experiencing ongoing mass killing.**
+**STEP B: Load, clean, filter, and save processed DEWP data to reflect Caucasus countries' risk data for experiencing ongoing mass killing.**
 
 This step loads, cleans, filters, and saves the processed DEWP data to reflect Caucasus countries' risks of experiencing ongoing mass killing.**
 
@@ -236,7 +246,7 @@ This step loads, cleans, filters, and saves the processed DEWP data to reflect C
 
 - riskrank: Country ranking based on "estimated risk for onset of intrastate mass killing in 2024-25" (Source 2)
 
-- year: **INPUT LABEL HERE** 
+- year: **INPUT LABEL HERE**
 
 - freediscussion: DEWP "Citizens' ability to openly discuss political issues." (Source 2)
 
@@ -263,8 +273,7 @@ This step loads, cleans, filters, and saves the processed DEWP data to reflect C
 
 
 
-**STEP C: Load, clean, filter, and save processed WB API data in raw JSON format
-to reflect desired indicator names and indicator codes.**
+**STEP C: Load, clean, filter, and save processed WB API data in raw JSON format to reflect desired indicator names and indicator codes.**
 
 6.) Load the "RAW_WB_Caucasus_2025.json" file (obtained in Step 1, Data Collection, in the "get_data.py" file)
 
@@ -498,3 +507,12 @@ Consulted Suoprce:
 1.) https://earlywarningproject.ushmm.org/reports/countries-at-risk-for-intrastate-mass-killing-2024-25-early-warning-project-statistical-risk-assessment-results
 2.) https://earlywarningproject.ushmm.org/reports-and-downloads (WorldwideData_sra_2025.csv)
 3.) https://www.iso.org/iso-3166-country-codes.html
+4.) https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG
+5.) https://data.worldbank.org/indicator/NY.GDP.PCAP.KD
+6.) https://data.worldbank.org/indicator/SP.POP.GROW
+7.) https://data.worldbank.org/indicator/SP.POP.TOTL
+8.) https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS
+9.) https://data.worldbank.org/indicator/GE.EST
+10.) https://data.worldbank.org/indicator/RL.EST
+11.) https://data.worldbank.org/indicator/SE.SEC.ENRR
+12.) HD.HCI.OVRL
