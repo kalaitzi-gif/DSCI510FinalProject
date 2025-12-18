@@ -11,7 +11,7 @@ The team member for this project is Maria Popovic. Email, GitHub username, and U
 
 Below, I outline the necessary components for completing this project.
 
-**Requirement Installation for Project**
+**Installation RequirementS for Project**
 
 **The requirements for this project are the following libraries (via terminal):**
 
