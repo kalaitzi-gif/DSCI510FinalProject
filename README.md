@@ -1,4 +1,6 @@
-**DSCI510FinalProject**
+Maria Popovic
+DSCI510 Final Project
+18 Dec 2025
 
 This GitHub Repository (and accompanying zip file) contains the files necessary for completing the DSCI510 final project for the Fall 2025 semester, taught by Professor Itay Hen.
 
