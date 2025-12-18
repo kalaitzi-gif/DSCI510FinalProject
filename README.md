@@ -217,7 +217,6 @@ Steps for the Data Analysis Procedure are below:
 
 1.) Import numpy and pandas libraries (as described above)
 
-
 **STEP B: Load merged Dartmouth EWP (DEWP) and World Bank API file**
 
 1.) Load the "merged_wb_dartmouth_df" file obtained in Step 2 of this project (Data Cleaning, "clean_data.py")
@@ -236,7 +235,7 @@ Steps for the Data Analysis Procedure are below:
 
 ****Descriptive Statistics Procedure****
 
-3.) Perform the following descriptive statistics on "merged_wb_dartmouth_df", listed below:
+3.) Perform the following descriptive statistics (below) on "merged_wb_dartmouth_df", on each of the listed risk factors and indicators (below descriptive statistics):
 
 - Count
 - Mean
@@ -245,33 +244,32 @@ Steps for the Data Analysis Procedure are below:
 - 50th percentile
 - 75th percentile
 - Maximum
-- Minimmum
+- Minimum
 
-The output of these statistics includes elements such as count, mean, standard deviation, 25th percentile, 50th
-percentile, and the 75th percentile of each of the listed risk factors and indicators below
+These statistics are performed on each of the listed risk factors and indicators below:
 
-risk_in_2024 --> select DEWP "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
+- risk_in_2024 --> select DEWP "country's Estimated Risk for 'onset of intrastate mass killing in 2024-25'"
 
-freediscussion --> select DEWP "Citizens' ability to openly discuss political issues."
+- freediscussion --> select DEWP "Citizens' ability to openly discuss political issues."
 
-efindex --> select DEWP variable representing percentage of "Ethnic Heterogeneity." 
+- efindex --> select DEWP variable representing percentage of "Ethnic Heterogeneity."
 
-religiousfreedom --> select DEWP variable showing whether or not there is "Freedom of Religion." 
+- religiousfreedom --> select DEWP variable showing whether or not there is "Freedom of Religion."
 
-discrimpop --> select DEWP variable representing "Portion of Population Coded as Being Discriminated Against (%)"
+- discrimpop --> select DEWP variable representing "Portion of Population Coded as Being Discriminated Against (%)"
 
-GDP growth (annual %) --> select WB 'GDP Growth' indicator 
+- GDP growth (annual %) --> select WB 'GDP Growth' indicator
 
-GDP per capita (constant 2015 US$) --> select WB 'GDP per capita (constant 2015 US$)' indicator 
+- GDP per capita (constant 2015 US$) --> select WB 'GDP per capita (constant 2015 US$)' indicator
 
-Population growth (annual %) --> select WB 'Population growth (annual %)' indicator
+- Population growth (annual %) --> select WB 'Population growth (annual %)' indicator
 
-Population, total --> select WB 'Population, total' indicator 
+- Population, total --> select WB 'Population, total' indicator
 
-Urban population (% of total population) --> select WB 'Urban Population (%)' indicator 
+- Urban population (% of total population) --> select WB 'Urban Population (%)' indicator 
 
 
-Next, we save these descriptive statistics for these risk factors/indicators
+3.) Save these descriptive statistics for these risk factors and indicators, as a CSV file
 
 **Per-Country Averages Procedure**
 
