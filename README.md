@@ -8,7 +8,7 @@ The team member for this project is Maria Popovic. Email, GitHub username, and U
 
 **Email:** kalaitzi@usc.edu
 
-**Github username:** kalaitzi-gif
+**Github Username:** kalaitzi-gif
 
 **USC ID:** 2532568719
 
